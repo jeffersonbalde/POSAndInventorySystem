@@ -44,8 +44,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.buttonEnter = new System.Windows.Forms.Button();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,9 +57,7 @@
             // 
             // labelDate
             // 
-            this.labelDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Segoe UI", 39F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDate.ForeColor = System.Drawing.Color.White;
@@ -71,9 +70,7 @@
             // 
             // labelTime
             // 
-            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Segoe UI", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
@@ -246,10 +243,9 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.buttonEnter);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button0);
@@ -262,20 +258,27 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Location = new System.Drawing.Point(332, 306);
+            this.panel1.MaximumSize = new System.Drawing.Size(653, 450);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(653, 450);
             this.panel1.TabIndex = 62;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBoxPassword
+            // button10
             // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 29F, System.Drawing.FontStyle.Bold);
-            this.textBoxPassword.Location = new System.Drawing.Point(332, 232);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(653, 72);
-            this.textBoxPassword.TabIndex = 63;
-            this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxPassword.UseSystemPasswordChar = true;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 29F, System.Drawing.FontStyle.Bold);
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(227, 334);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(200, 100);
+            this.button10.TabIndex = 63;
+            this.button10.Text = "X";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // buttonEnter
             // 
@@ -284,13 +287,25 @@
             this.buttonEnter.FlatAppearance.BorderSize = 0;
             this.buttonEnter.Font = new System.Drawing.Font("Segoe UI Semibold", 29F, System.Drawing.FontStyle.Bold);
             this.buttonEnter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(239)))));
-            this.buttonEnter.Location = new System.Drawing.Point(227, 334);
+            this.buttonEnter.Location = new System.Drawing.Point(433, 334);
             this.buttonEnter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(406, 100);
+            this.buttonEnter.Size = new System.Drawing.Size(200, 100);
             this.buttonEnter.TabIndex = 62;
             this.buttonEnter.Text = "Enter";
             this.buttonEnter.UseVisualStyleBackColor = false;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 29F, System.Drawing.FontStyle.Bold);
+            this.textBoxPassword.Location = new System.Drawing.Point(332, 232);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(653, 72);
+            this.textBoxPassword.TabIndex = 63;
+            this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // frmSecurity
             // 
@@ -335,5 +350,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxPassword;
         public System.Windows.Forms.Button buttonEnter;
+        public System.Windows.Forms.Button button10;
     }
 }

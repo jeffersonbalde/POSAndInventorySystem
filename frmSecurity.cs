@@ -106,57 +106,57 @@ namespace OOP_System
             //    MessageBox.Show(ex.Message, "ALL J GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //}
 
-            //try
-            //{
-            //    bool found = false;
-            //    string name = "";
-            //    string role = "";
+            try
+            {
+                bool found = false;
+                string name = "";
+                string role = "";
 
-            //    cn.Open();
-            //    string query = "SELECT * FROM Pin WHERE Pin = @Pin";
-            //    cm = new SqlCommand(query, cn);
-            //    cm.Parameters.AddWithValue("@Pin", txtUser.Text);
-            //    dr = cm.ExecuteReader();
-            //    dr.Read();
+                cn.Open();
+                string query = "SELECT * FROM Pin WHERE Pin = @Pin";
+                cm = new SqlCommand(query, cn);
+                cm.Parameters.AddWithValue("@Pin", textBoxPassword.Text);
+                dr = cm.ExecuteReader();
+                dr.Read();
 
-            //    if (dr.HasRows)
-            //    {
-            //        found = true;
-            //        name = dr["Name"].ToString();
-            //        role = dr["Type"].ToString();
-            //    }
+                if (dr.HasRows)
+                {
+                    found = true;
+                    name = dr["Name"].ToString();
+                    role = dr["Type"].ToString();
+                }
 
-            //    cn.Close();
-            //    dr.Close();
+                cn.Close();
+                dr.Close();
 
-            //    if ((found) && (role == "Admin"))
-            //    {
-            //        MessageBox.Show("WELCOME " + name + " ", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        Form1 frm = new Form1();
-            //        frm.lblName.Text = name;
-            //        frm.lblRole.Text = role;
-            //        frm.ShowDialog();
-            //        this.Dispose();
+                if ((found) && (role == "Admin"))
+                {
+                    MessageBox.Show("WELCOME " + name + " ", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form1 frm = new Form1();
+                    frm.lblName.Text = name;
+                    frm.lblRole.Text = role;
+                    frm.ShowDialog();
+                    this.Dispose();
 
-            //    }
-            //    else if ((found) && (role == "Cashier"))
-            //    {
-            //        MessageBox.Show("WELCOME " + name + " ", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        frmPOS frm = new frmPOS(formSales, frmAdd);
-            //        frm.lblUser.Text = name;
-            //        frm.ShowDialog();
-            //        this.Dispose();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Username and password do not match", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
+                }
+                else if ((found) && (role == "Cashier"))
+                {
+                    MessageBox.Show("WELCOME " + name + " ", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmPOS frm = new frmPOS(formSales, frmAdd);
+                    frm.lblUser.Text = name;
+                    frm.ShowDialog();
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Username and password do not match", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message, "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -263,6 +263,77 @@ namespace OOP_System
         private void button0_Click(object sender, EventArgs e)
         {
             textBoxPassword.Text += button0.Text;
+        }
+
+        private void buttonEnter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool found = false;
+                string name = "";
+                string role = "";
+
+                cn.Open();
+                string query = "SELECT * FROM Pin WHERE Pin = @Pin";
+                cm = new SqlCommand(query, cn);
+                cm.Parameters.AddWithValue("@Pin", textBoxPassword.Text);
+                dr = cm.ExecuteReader();
+                dr.Read();
+
+                if (dr.HasRows)
+                {
+                    found = true;
+                    name = dr["Name"].ToString();
+                    role = dr["Type"].ToString();
+                }
+
+                cn.Close();
+                dr.Close();
+
+                if ((found) && (role == "Admin"))
+                {
+                    MessageBox.Show("WELCOME " + name + " ", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form1 frm = new Form1();
+                    frm.lblName.Text = name;
+                    frm.lblRole.Text = role;
+                    frm.ShowDialog();
+                    this.Dispose();
+
+                }
+                else if ((found) && (role == "Cashier"))
+                {
+                    MessageBox.Show("WELCOME " + name + " ", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmPOS frm = new frmPOS(formSales, frmAdd);
+                    frm.lblUser.Text = name;
+                    frm.ShowDialog();
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect pin, please try again", "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBoxPassword.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message, "Business Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int length = textBoxPassword.Text.Length;
+
+
+            if (textBoxPassword.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                textBoxPassword.Text = textBoxPassword.Text.Substring(0, length - 1);
+            }
         }
     }
 }

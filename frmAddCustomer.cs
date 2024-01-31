@@ -75,7 +75,7 @@ namespace OOP_System
 
                 cn.Close();
 
-                frmAdd.LoadCustomer();
+                //frmAdd.LoadCustomer();
 
                 this.Dispose();
             }

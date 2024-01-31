@@ -61,7 +61,7 @@ namespace OOP_System
 
                 //ReportParameter pVatable = new ReportParameter("pVatable", f.lblVatable.Text);
                 //ReportParameter pVat = new ReportParameter("pVat", f.lblVat.Text);
-                ReportParameter pDiscount = new ReportParameter("pDiscount", f.lblDiscount.Text);
+                ReportParameter pDiscount = new ReportParameter("pDiscount", f.labelDiscount.Text);
                 ReportParameter pTotal = new ReportParameter("pTotal", f.lblTotal.Text);
                 ReportParameter pCash = new ReportParameter("pCash", pcash);
                 ReportParameter pChange = new ReportParameter("pChange", pchange);

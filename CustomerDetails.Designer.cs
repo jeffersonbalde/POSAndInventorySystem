@@ -53,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(825, 48);
+            this.panel1.Size = new System.Drawing.Size(863, 48);
             this.panel1.TabIndex = 28;
             // 
             // button1
@@ -65,7 +65,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(775, 0);
+            this.button1.Location = new System.Drawing.Point(813, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 48);
             this.button1.TabIndex = 5;
@@ -89,7 +89,7 @@
             // 
             // 
             this.txtSearchProduct.CustomButton.Image = null;
-            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(766, 1);
+            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(804, 1);
             this.txtSearchProduct.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchProduct.CustomButton.Name = "";
             this.txtSearchProduct.CustomButton.Size = new System.Drawing.Size(29, 29);
@@ -113,7 +113,7 @@
             this.txtSearchProduct.SelectionLength = 0;
             this.txtSearchProduct.SelectionStart = 0;
             this.txtSearchProduct.ShortcutsEnabled = true;
-            this.txtSearchProduct.Size = new System.Drawing.Size(796, 31);
+            this.txtSearchProduct.Size = new System.Drawing.Size(834, 31);
             this.txtSearchProduct.TabIndex = 29;
             this.txtSearchProduct.UseSelectable = true;
             this.txtSearchProduct.WaterMark = "CUSTOMER";
@@ -165,7 +165,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(834, 358);
             this.dataGridView1.TabIndex = 31;
             // 
             // Column1
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(825, 507);
+            this.ClientSize = new System.Drawing.Size(863, 470);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtSearchProduct);

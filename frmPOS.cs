@@ -37,7 +37,7 @@ namespace OOP_System
         public frmPOS(frmSoldItems form, frmAddDebt frm)
         {
             InitializeComponent();
-            lblDate.Text = DateTime.Now.ToLongDateString();
+            //lblDate.Text = DateTime.Now.ToLongDateString();
             cn = new SqlConnection(dbcon.MyConnection());
             this.KeyPreview = true;
             frmSales = form;
@@ -188,14 +188,14 @@ namespace OOP_System
 
         public void GetCartTotal()
         {
-            double discount = Double.Parse(lblDiscount.Text);
+            double discount = Double.Parse(labelDiscount.Text);
             double sales = Double.Parse(lblTotal.Text);
             //double vat = sales * dbcon.GetVal();
             //double vatable = sales - vat;
 
             //lblVat.Text = vat.ToString("#,##0.00");
             //lblVatable.Text = vatable.ToString("#,##0.00");z
-            lblDisplayTotal.Text = sales.ToString("#,##0.00");
+            labelTotal.Text = sales.ToString("#,##0.00");
         }
 
         public void GetTransNo()
@@ -387,16 +387,16 @@ namespace OOP_System
                 dr.Close(); 
                 cn.Close();
                 lblTotal.Text = total.ToString("#,##0.00");
-                lblDiscount.Text = discount.ToString("#,##0.00");
+                labelDiscount.Text = discount.ToString("#,##0.00");
                 GetCartTotal();
                 if(hasrecord == true)
                 {
-                    btnPayment.Enabled = true;
+                    //btnPayment.Enabled = true;
                     btnDiscount.Enabled = true;
                     btnCancel.Enabled = true;
                 }else
                 {
-                    btnPayment.Enabled = false;
+                    //btnPayment.Enabled = false;
                     btnDiscount.Enabled = false;
                     btnCancel.Enabled = false;
                 }
@@ -555,13 +555,13 @@ namespace OOP_System
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            frmSettle frm = new frmSettle(this, frmAdd);
+            //frmSettle frm = new frmSettle(this, frmAdd);
             //frm.txtSale.Text = lblDisplayTotal.Text;
-            frm.lblDiscount.Text = lblDiscount.Text;    
-            frm.comboBoxCategory.Text = "CASH";
-            frm.txtSale.Text = GetTotalItem().ToString("#,##0.00");
-            frm.ShowDialog();
-            frm.txtCash.Focus();
+            //frm.lblDiscount.Text = labelDiscount.Text;    
+            //frm.comboBoxCategory.Text = "CASH";
+            //frm.txtSale.Text = GetTotalItem().ToString("#,##0.00");
+            //frm.ShowDialog();
+            //frm.txtCash.Focus();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -675,17 +675,17 @@ namespace OOP_System
                     MessageBox.Show("You have no transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if (e.KeyCode == Keys.F3)
-            {
-                if (btnPayment.Enabled == true)
-                {
-                    btnPayment_Click(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("You have no transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            //else if (e.KeyCode == Keys.F3)
+            //{
+            //    if (btnPayment.Enabled == true)
+            //    {
+            //        btnPayment_Click(sender, e);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("You have no transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    }
+            //}
             else if (e.KeyCode == Keys.F4)
             {
                 if (btnCancel.Enabled == true)
@@ -817,6 +817,289 @@ namespace OOP_System
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+           textBoxCash.Text += button7.Text;
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button0.Text;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button8.Text;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button9.Text;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button4.Text;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button5.Text;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button6.Text;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button1.Text;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button2.Text;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button3.Text;
+        }
+
+        private void button00_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += button00.Text;
+        }
+
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text += buttonDot.Text;
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            int length = textBoxCash.Text.Length;
+
+
+            if (textBoxCash.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                textBoxCash.Text = textBoxCash.Text.Substring(0, length - 1);
+            }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Clear();
+            textBoxCash.Focus();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button10.Text;
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button20.Text;
+        }
+
+        private void button50_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button50.Text;
+        }
+
+        private void button100_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button100.Text;
+        }
+
+        private void button200_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button200.Text;
+        }
+
+        private void button300_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button300.Text;
+        }
+
+        private void button400_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button400.Text;
+        }
+
+        private void button500_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button500.Text;
+        }
+
+        private void button1000_Click(object sender, EventArgs e)
+        {
+            textBoxCash.Text = button1000.Text;
+        }
+
+        private void textBoxCash_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double total = double.Parse(labelTotal.Text);
+                double cash = double.Parse(textBoxCash.Text);
+                double change = cash - total;
+                labelChange.Text = change.ToString("#,##0.00");
+
+            }
+            catch (Exception ex)
+            {
+                labelChange.Text = "0.00";
+            }
+        }
+
+        private void textBoxCash_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //accept only numbers
+            if (e.KeyChar == 46)
+            {
+                //accept . character
+            }
+            else if (e.KeyChar == 8)
+            {
+                //accept backspace
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57)) //accept code 48-57 between 0-9
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        public void UpdateQuantity()
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                cn.Open();
+                string query = "UPDATE tblproduct SET qty = qty - " + int.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString()) + " WHERE pcode = '" + dataGridView1.Rows[i].Cells[2].Value.ToString() + "'";
+                cm = new SqlCommand(query, cn);
+                cm.ExecuteNonQuery();
+                cn.Close();
+
+                cn.Open();
+                string query1 = "UPDATE tblcart SET status = 'Sold', MOP = 'CASH' WHERE id = '" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "'";
+                cm = new SqlCommand(query1, cn);
+                cm.ExecuteNonQuery();
+                cn.Close();
+            }
+        }
+
+
+        public void SavePauseTransaction()
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                cn.Open();
+                string query1 = "UPDATE tblcart SET status = 'Pause', MOP = 'CASH' WHERE id = '" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "'";
+                cm = new SqlCommand(query1, cn);
+                cm.ExecuteNonQuery();
+                cn.Close();
+            }
+        }
+
+        private void buttonPay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("You have no transaction, please select an item", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBoxCash.Clear();
+                    return;
+                }
+
+                if ((double.Parse(labelChange.Text) < 0) || (textBoxCash.Text == String.Empty))
+                {
+                    MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    //if (comboBoxCategory.Text == "CASH")
+                    //{
+                    //    UpdateQuantity();
+                    //}
+                    //else
+                    //{
+                    //    GCASHUpdateQuantity();
+                    //}
+
+                    UpdateQuantity();
+
+                    frmReceipt frm = new frmReceipt(this);
+                    frm.LoadReport(labelTotal.Text, labelChange.Text);
+
+                    frm.ShowDialog();
+
+                    MessageBox.Show("Payment successfully saved!", "CONVENIENCE STORE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBoxCash.Clear();
+                    GetTransNo();
+                    LoadCart();
+                    LoadRecords();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ALL J GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            frmAddCustomer frm = new frmAddCustomer(null);
+            frm.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            CustomerDetails frm = new CustomerDetails();
+            frm.LoadCustomerInformation();
+            frm.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("You have no transaction to pause", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBoxCash.Clear();
+                    return;
+                }
+
+                if (MessageBox.Show("Are you sure you want to pause this transaction?", "PAUSE TRANSACTION", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    SavePauseTransaction();
+
+                    MessageBox.Show("Transaction paused. You may resume it through resume transaction menu", "CONVENIENCE STORE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBoxCash.Clear();
+                    GetTransNo();
+                    LoadCart();
+                    LoadRecords();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "CONVENIENCE STORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

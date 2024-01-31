@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(863, 66);
             this.panel1.TabIndex = 23;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(792, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 66);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -78,9 +94,9 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(22, 113);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 50);
+            this.label7.Size = new System.Drawing.Size(122, 50);
             this.label7.TabIndex = 92;
-            this.label7.Text = "NAME";
+            this.label7.Text = "Name";
             // 
             // txtContactNo
             // 
@@ -98,9 +114,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 204);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 50);
+            this.label2.Size = new System.Drawing.Size(220, 50);
             this.label2.TabIndex = 94;
-            this.label2.Text = "CONTACT NO.";
+            this.label2.Text = "Contact No.";
             // 
             // txtAddress
             // 
@@ -116,9 +132,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 301);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 50);
+            this.label3.Size = new System.Drawing.Size(157, 50);
             this.label3.TabIndex = 96;
-            this.label3.Text = "ADDRESS";
+            this.label3.Text = "Address";
             // 
             // btnSave
             // 
@@ -133,25 +149,9 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(188, 54);
             this.btnSave.TabIndex = 98;
-            this.btnSave.Text = "SAVE";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnEnter_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(792, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 66);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmAddCustomer
             // 
