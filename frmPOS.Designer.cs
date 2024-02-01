@@ -37,10 +37,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +50,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAdd = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colRemove = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.labelTotal = new System.Windows.Forms.Label();
             this.lblTransno = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,18 +64,6 @@
             this.lblUserType = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnSale = new System.Windows.Forms.Button();
-            this.btnDiscount = new System.Windows.Forms.Button();
-            this.txtQty = new MetroFramework.Controls.MetroTextBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtSearchProduct = new MetroFramework.Controls.MetroTextBox();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +71,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Select = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.labelBusinessName = new System.Windows.Forms.Label();
@@ -126,10 +110,26 @@
             this.button500 = new System.Windows.Forms.Button();
             this.button400 = new System.Windows.Forms.Button();
             this.buttonPay = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.buttonQuit = new System.Windows.Forms.Button();
+            this.buttonPrintReciept = new System.Windows.Forms.Button();
+            this.buttonResumeTransaction = new System.Windows.Forms.Button();
+            this.buttonPauseTransaction = new System.Windows.Forms.Button();
+            this.buttonCustomerDetails = new System.Windows.Forms.Button();
+            this.buttonAddCustomer = new System.Windows.Forms.Button();
+            this.buttonAddDiscount = new System.Windows.Forms.Button();
+            this.buttonClearItems = new System.Windows.Forms.Button();
+            this.buttonItemSales = new System.Windows.Forms.Button();
+            this.colAdd = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colRemove = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Select = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txtSearchProduct = new MetroFramework.Controls.MetroTextBox();
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
+            this.txtQty = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -155,9 +155,9 @@
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 13F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -274,33 +274,6 @@
             this.Column6.Name = "Column6";
             this.Column6.Width = 102;
             // 
-            // colAdd
-            // 
-            this.colAdd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colAdd.HeaderText = "";
-            this.colAdd.Image = ((System.Drawing.Image)(resources.GetObject("colAdd.Image")));
-            this.colAdd.MinimumWidth = 6;
-            this.colAdd.Name = "colAdd";
-            this.colAdd.Width = 6;
-            // 
-            // colRemove
-            // 
-            this.colRemove.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colRemove.HeaderText = "";
-            this.colRemove.Image = ((System.Drawing.Image)(resources.GetObject("colRemove.Image")));
-            this.colRemove.MinimumWidth = 6;
-            this.colRemove.Name = "colRemove";
-            this.colRemove.Width = 6;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 6;
-            // 
             // labelTotal
             // 
             this.labelTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -317,12 +290,11 @@
             // 
             // lblTransno
             // 
-            this.lblTransno.AutoSize = true;
-            this.lblTransno.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransno.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.lblTransno.Location = new System.Drawing.Point(224, 41);
+            this.lblTransno.Location = new System.Drawing.Point(197, 39);
             this.lblTransno.Name = "lblTransno";
-            this.lblTransno.Size = new System.Drawing.Size(225, 35);
+            this.lblTransno.Size = new System.Drawing.Size(586, 35);
             this.lblTransno.TabIndex = 1;
             this.lblTransno.Text = "000000000000000";
             // 
@@ -393,30 +365,28 @@
             // lblTime
             // 
             this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(1376, 2);
+            this.lblTime.Location = new System.Drawing.Point(1369, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(104, 31);
+            this.lblTime.Size = new System.Drawing.Size(124, 31);
             this.lblTime.TabIndex = 8;
             this.lblTime.Text = "00:00:00";
-            this.lblTime.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // lblDate1
             // 
             this.lblDate1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDate1.AutoSize = true;
             this.lblDate1.BackColor = System.Drawing.Color.Transparent;
             this.lblDate1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblDate1.ForeColor = System.Drawing.Color.White;
-            this.lblDate1.Location = new System.Drawing.Point(1083, 2);
+            this.lblDate1.Location = new System.Drawing.Point(1098, 0);
             this.lblDate1.Name = "lblDate1";
-            this.lblDate1.Size = new System.Drawing.Size(104, 31);
+            this.lblDate1.Size = new System.Drawing.Size(250, 31);
             this.lblDate1.TabIndex = 9;
             this.lblDate1.Text = "00:00:00";
-            this.lblDate1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblDate1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblUser
             // 
@@ -424,16 +394,16 @@
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(433, 2);
+            this.lblUser.Location = new System.Drawing.Point(696, 2);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(226, 33);
+            this.lblUser.Size = new System.Drawing.Size(396, 33);
             this.lblUser.TabIndex = 18;
             this.lblUser.Text = "Amira Mohammad";
             // 
             // lblUserType
             // 
             this.lblUserType.AutoSize = true;
-            this.lblUserType.Location = new System.Drawing.Point(455, 49);
+            this.lblUserType.Location = new System.Drawing.Point(596, 35);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(198, 30);
             this.lblUserType.TabIndex = 21;
@@ -463,259 +433,6 @@
             this.panel5.Size = new System.Drawing.Size(693, 79);
             this.panel5.TabIndex = 4;
             // 
-            // btnSale
-            // 
-            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
-            this.btnSale.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSale.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSale.FlatAppearance.BorderSize = 0;
-            this.btnSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSale.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSale.ForeColor = System.Drawing.Color.Black;
-            this.btnSale.Image = ((System.Drawing.Image)(resources.GetObject("btnSale.Image")));
-            this.btnSale.Location = new System.Drawing.Point(0, 0);
-            this.btnSale.Name = "btnSale";
-            this.btnSale.Size = new System.Drawing.Size(166, 69);
-            this.btnSale.TabIndex = 10;
-            this.btnSale.Text = "[F1] ITEM SALES";
-            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSale.UseVisualStyleBackColor = false;
-            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
-            // 
-            // btnDiscount
-            // 
-            this.btnDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
-            this.btnDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiscount.Enabled = false;
-            this.btnDiscount.FlatAppearance.BorderSize = 0;
-            this.btnDiscount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDiscount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDiscount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDiscount.ForeColor = System.Drawing.Color.Black;
-            this.btnDiscount.Image = ((System.Drawing.Image)(resources.GetObject("btnDiscount.Image")));
-            this.btnDiscount.Location = new System.Drawing.Point(332, 0);
-            this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(166, 67);
-            this.btnDiscount.TabIndex = 7;
-            this.btnDiscount.Text = "[F3] ADD DISCOUNT";
-            this.btnDiscount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDiscount.UseVisualStyleBackColor = false;
-            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
-            // 
-            // txtQty
-            // 
-            this.txtQty.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            // 
-            // 
-            // 
-            this.txtQty.CustomButton.Image = null;
-            this.txtQty.CustomButton.Location = new System.Drawing.Point(67, 1);
-            this.txtQty.CustomButton.Name = "";
-            this.txtQty.CustomButton.Size = new System.Drawing.Size(29, 29);
-            this.txtQty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtQty.CustomButton.TabIndex = 1;
-            this.txtQty.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtQty.CustomButton.UseSelectable = true;
-            this.txtQty.CustomButton.Visible = false;
-            this.txtQty.Enabled = false;
-            this.txtQty.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtQty.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtQty.Icon = ((System.Drawing.Image)(resources.GetObject("txtQty.Icon")));
-            this.txtQty.Lines = new string[] {
-        "1"};
-            this.txtQty.Location = new System.Drawing.Point(655, 45);
-            this.txtQty.MaxLength = 32767;
-            this.txtQty.Name = "txtQty";
-            this.txtQty.PasswordChar = '\0';
-            this.txtQty.PromptText = "Qty";
-            this.txtQty.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtQty.SelectedText = "";
-            this.txtQty.SelectionLength = 0;
-            this.txtQty.SelectionStart = 0;
-            this.txtQty.ShortcutsEnabled = true;
-            this.txtQty.Size = new System.Drawing.Size(97, 31);
-            this.txtQty.TabIndex = 9;
-            this.txtQty.Text = "1";
-            this.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtQty.UseSelectable = true;
-            this.txtQty.Visible = false;
-            this.txtQty.WaterMark = "Qty";
-            this.txtQty.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtQty.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(1343, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(162, 69);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "[ESC] QUIT";
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Enabled = false;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(166, 0);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(166, 67);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "[F2] CLEAR ITEMS";
-            this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnNew.ForeColor = System.Drawing.Color.Black;
-            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-            this.btnNew.Location = new System.Drawing.Point(498, 0);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(166, 67);
-            this.btnNew.TabIndex = 5;
-            this.btnNew.Text = "[F4] NEW TRANSACTION";
-            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 125;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 125;
-            // 
-            // dataGridViewImageColumn3
-            // 
-            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn3.HeaderText = "";
-            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
-            this.dataGridViewImageColumn3.MinimumWidth = 6;
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            this.dataGridViewImageColumn3.Width = 125;
-            // 
-            // dataGridViewImageColumn4
-            // 
-            this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn4.HeaderText = "";
-            this.dataGridViewImageColumn4.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn4.Image")));
-            this.dataGridViewImageColumn4.MinimumWidth = 6;
-            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
-            this.dataGridViewImageColumn4.Width = 125;
-            // 
-            // txtSearchProduct
-            // 
-            // 
-            // 
-            // 
-            this.txtSearchProduct.CustomButton.Image = null;
-            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(335, 1);
-            this.txtSearchProduct.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearchProduct.CustomButton.Name = "";
-            this.txtSearchProduct.CustomButton.Size = new System.Drawing.Size(45, 45);
-            this.txtSearchProduct.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearchProduct.CustomButton.TabIndex = 1;
-            this.txtSearchProduct.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearchProduct.CustomButton.UseSelectable = true;
-            this.txtSearchProduct.CustomButton.Visible = false;
-            this.txtSearchProduct.DisplayIcon = true;
-            this.txtSearchProduct.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtSearchProduct.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearchProduct.Icon")));
-            this.txtSearchProduct.Lines = new string[0];
-            this.txtSearchProduct.Location = new System.Drawing.Point(402, 81);
-            this.txtSearchProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearchProduct.MaxLength = 32767;
-            this.txtSearchProduct.Name = "txtSearchProduct";
-            this.txtSearchProduct.PasswordChar = '\0';
-            this.txtSearchProduct.PromptText = "ITEMS";
-            this.txtSearchProduct.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearchProduct.SelectedText = "";
-            this.txtSearchProduct.SelectionLength = 0;
-            this.txtSearchProduct.SelectionStart = 0;
-            this.txtSearchProduct.ShortcutsEnabled = true;
-            this.txtSearchProduct.Size = new System.Drawing.Size(381, 47);
-            this.txtSearchProduct.TabIndex = 23;
-            this.txtSearchProduct.UseSelectable = true;
-            this.txtSearchProduct.WaterMark = "ITEMS";
-            this.txtSearchProduct.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearchProduct.WaterMarkFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchProduct.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
-            // 
-            // txtSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(335, 1);
-            this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(45, 45);
-            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearch.CustomButton.TabIndex = 1;
-            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearch.CustomButton.UseSelectable = true;
-            this.txtSearch.CustomButton.Visible = false;
-            this.txtSearch.DisplayIcon = true;
-            this.txtSearch.Enabled = false;
-            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
-            this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(15, 81);
-            this.txtSearch.MaxLength = 32767;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PromptText = "BARCODE";
-            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.SelectionLength = 0;
-            this.txtSearch.SelectionStart = 0;
-            this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(381, 47);
-            this.txtSearch.TabIndex = 7;
-            this.txtSearch.UseSelectable = true;
-            this.txtSearch.WaterMark = "BARCODE";
-            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -725,9 +442,9 @@
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 13F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 15F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -772,7 +489,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "#";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 54;
+            this.dataGridViewTextBoxColumn1.Width = 58;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -781,7 +498,7 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Visible = false;
-            this.dataGridViewTextBoxColumn2.Width = 98;
+            this.dataGridViewTextBoxColumn2.Width = 109;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -789,7 +506,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "BARCODE";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 137;
+            this.dataGridViewTextBoxColumn3.Width = 152;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -804,7 +521,7 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "PRICE";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 97;
+            this.dataGridViewTextBoxColumn7.Width = 107;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -812,16 +529,7 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "QTY";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 81;
-            // 
-            // Select
-            // 
-            this.Select.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Select.HeaderText = "";
-            this.Select.Image = ((System.Drawing.Image)(resources.GetObject("Select.Image")));
-            this.Select.MinimumWidth = 6;
-            this.Select.Name = "Select";
-            this.Select.Width = 6;
+            this.dataGridViewTextBoxColumn8.Width = 88;
             // 
             // panel3
             // 
@@ -843,22 +551,21 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(629, 2);
+            this.label2.Location = new System.Drawing.Point(607, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 33);
+            this.label2.Size = new System.Drawing.Size(91, 33);
             this.label2.TabIndex = 27;
-            this.label2.Text = "/ Cashier";
+            this.label2.Text = "Cashier /  ";
             // 
             // labelBusinessName
             // 
-            this.labelBusinessName.AutoSize = true;
             this.labelBusinessName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBusinessName.ForeColor = System.Drawing.Color.White;
             this.labelBusinessName.Location = new System.Drawing.Point(8, -1);
             this.labelBusinessName.Name = "labelBusinessName";
-            this.labelBusinessName.Size = new System.Drawing.Size(322, 41);
+            this.labelBusinessName.Size = new System.Drawing.Size(553, 41);
             this.labelBusinessName.TabIndex = 26;
-            this.labelBusinessName.Text = "CONVENIENCE STORE";
+            this.labelBusinessName.Text = "BUSINESS NAME";
             // 
             // panel1
             // 
@@ -881,15 +588,15 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.button11);
-            this.panel4.Controls.Add(this.btnSale);
-            this.panel4.Controls.Add(this.button15);
-            this.panel4.Controls.Add(this.button14);
-            this.panel4.Controls.Add(this.button13);
-            this.panel4.Controls.Add(this.button12);
-            this.panel4.Controls.Add(this.btnNew);
-            this.panel4.Controls.Add(this.btnDiscount);
-            this.panel4.Controls.Add(this.btnCancel);
+            this.panel4.Controls.Add(this.buttonQuit);
+            this.panel4.Controls.Add(this.buttonPrintReciept);
+            this.panel4.Controls.Add(this.buttonResumeTransaction);
+            this.panel4.Controls.Add(this.buttonPauseTransaction);
+            this.panel4.Controls.Add(this.buttonCustomerDetails);
+            this.panel4.Controls.Add(this.buttonAddCustomer);
+            this.panel4.Controls.Add(this.buttonAddDiscount);
+            this.panel4.Controls.Add(this.buttonClearItems);
+            this.panel4.Controls.Add(this.buttonItemSales);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 759);
             this.panel4.Name = "panel4";
@@ -1375,80 +1082,375 @@
             this.buttonPay.UseVisualStyleBackColor = false;
             this.buttonPay.Click += new System.EventHandler(this.buttonPay_Click);
             // 
-            // button12
+            // dataGridViewImageColumn1
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(664, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(166, 67);
-            this.button12.TabIndex = 16;
-            this.button12.Text = "[F5] ADD CUSTOMER";
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 6;
             // 
-            // button13
+            // dataGridViewImageColumn2
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
-            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(830, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(166, 67);
-            this.button13.TabIndex = 17;
-            this.button13.Text = "[F6] CUSTOMER DETAILS";
-            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 6;
             // 
-            // button14
+            // dataGridViewImageColumn3
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
-            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.Location = new System.Drawing.Point(996, 0);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(166, 67);
-            this.button14.TabIndex = 18;
-            this.button14.Text = "[F7] PAUSE TRANSACTION";
-            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn3.HeaderText = "";
+            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
+            this.dataGridViewImageColumn3.MinimumWidth = 6;
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.Width = 6;
             // 
-            // button15
+            // dataGridViewImageColumn4
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
-            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.button15.ForeColor = System.Drawing.Color.Black;
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(1162, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(166, 67);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "[F8] PRINT RECIEPT";
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button15.UseVisualStyleBackColor = false;
+            this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn4.HeaderText = "";
+            this.dataGridViewImageColumn4.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn4.Image")));
+            this.dataGridViewImageColumn4.MinimumWidth = 6;
+            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
+            this.dataGridViewImageColumn4.Width = 6;
+            // 
+            // buttonQuit
+            // 
+            this.buttonQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
+            this.buttonQuit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonQuit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonQuit.FlatAppearance.BorderSize = 0;
+            this.buttonQuit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonQuit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonQuit.ForeColor = System.Drawing.Color.Black;
+            this.buttonQuit.Image = ((System.Drawing.Image)(resources.GetObject("buttonQuit.Image")));
+            this.buttonQuit.Location = new System.Drawing.Point(1343, 0);
+            this.buttonQuit.Name = "buttonQuit";
+            this.buttonQuit.Size = new System.Drawing.Size(162, 69);
+            this.buttonQuit.TabIndex = 8;
+            this.buttonQuit.Text = "[ESC] QUIT";
+            this.buttonQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonQuit.UseVisualStyleBackColor = false;
+            this.buttonQuit.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // buttonPrintReciept
+            // 
+            this.buttonPrintReciept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
+            this.buttonPrintReciept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPrintReciept.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonPrintReciept.FlatAppearance.BorderSize = 0;
+            this.buttonPrintReciept.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPrintReciept.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPrintReciept.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonPrintReciept.ForeColor = System.Drawing.Color.Black;
+            this.buttonPrintReciept.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintReciept.Image")));
+            this.buttonPrintReciept.Location = new System.Drawing.Point(1162, 0);
+            this.buttonPrintReciept.Name = "buttonPrintReciept";
+            this.buttonPrintReciept.Size = new System.Drawing.Size(166, 69);
+            this.buttonPrintReciept.TabIndex = 7;
+            this.buttonPrintReciept.Text = "[F8] PRINT RECIEPT";
+            this.buttonPrintReciept.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPrintReciept.UseVisualStyleBackColor = false;
+            // 
+            // buttonResumeTransaction
+            // 
+            this.buttonResumeTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
+            this.buttonResumeTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonResumeTransaction.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonResumeTransaction.FlatAppearance.BorderSize = 0;
+            this.buttonResumeTransaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonResumeTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonResumeTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonResumeTransaction.ForeColor = System.Drawing.Color.Black;
+            this.buttonResumeTransaction.Image = ((System.Drawing.Image)(resources.GetObject("buttonResumeTransaction.Image")));
+            this.buttonResumeTransaction.Location = new System.Drawing.Point(996, 0);
+            this.buttonResumeTransaction.Name = "buttonResumeTransaction";
+            this.buttonResumeTransaction.Size = new System.Drawing.Size(166, 69);
+            this.buttonResumeTransaction.TabIndex = 6;
+            this.buttonResumeTransaction.Text = "[F7] RESUME TRANSACTION";
+            this.buttonResumeTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonResumeTransaction.UseVisualStyleBackColor = false;
+            this.buttonResumeTransaction.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonPauseTransaction
+            // 
+            this.buttonPauseTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
+            this.buttonPauseTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPauseTransaction.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonPauseTransaction.FlatAppearance.BorderSize = 0;
+            this.buttonPauseTransaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPauseTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPauseTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonPauseTransaction.ForeColor = System.Drawing.Color.Black;
+            this.buttonPauseTransaction.Image = ((System.Drawing.Image)(resources.GetObject("buttonPauseTransaction.Image")));
+            this.buttonPauseTransaction.Location = new System.Drawing.Point(830, 0);
+            this.buttonPauseTransaction.Name = "buttonPauseTransaction";
+            this.buttonPauseTransaction.Size = new System.Drawing.Size(166, 69);
+            this.buttonPauseTransaction.TabIndex = 5;
+            this.buttonPauseTransaction.Text = "[F6] PAUSE TRANSACTION";
+            this.buttonPauseTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPauseTransaction.UseVisualStyleBackColor = false;
+            this.buttonPauseTransaction.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // buttonCustomerDetails
+            // 
+            this.buttonCustomerDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
+            this.buttonCustomerDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustomerDetails.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonCustomerDetails.FlatAppearance.BorderSize = 0;
+            this.buttonCustomerDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCustomerDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCustomerDetails.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonCustomerDetails.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustomerDetails.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomerDetails.Image")));
+            this.buttonCustomerDetails.Location = new System.Drawing.Point(664, 0);
+            this.buttonCustomerDetails.Name = "buttonCustomerDetails";
+            this.buttonCustomerDetails.Size = new System.Drawing.Size(166, 69);
+            this.buttonCustomerDetails.TabIndex = 4;
+            this.buttonCustomerDetails.Text = "[F5] CUSTOMER DETAILS";
+            this.buttonCustomerDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustomerDetails.UseVisualStyleBackColor = false;
+            this.buttonCustomerDetails.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // buttonAddCustomer
+            // 
+            this.buttonAddCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
+            this.buttonAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddCustomer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonAddCustomer.FlatAppearance.BorderSize = 0;
+            this.buttonAddCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAddCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAddCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonAddCustomer.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddCustomer.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddCustomer.Image")));
+            this.buttonAddCustomer.Location = new System.Drawing.Point(498, 0);
+            this.buttonAddCustomer.Name = "buttonAddCustomer";
+            this.buttonAddCustomer.Size = new System.Drawing.Size(166, 69);
+            this.buttonAddCustomer.TabIndex = 3;
+            this.buttonAddCustomer.Text = "[F4] ADD CUSTOMER";
+            this.buttonAddCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddCustomer.UseVisualStyleBackColor = false;
+            this.buttonAddCustomer.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // buttonAddDiscount
+            // 
+            this.buttonAddDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
+            this.buttonAddDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddDiscount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonAddDiscount.Enabled = false;
+            this.buttonAddDiscount.FlatAppearance.BorderSize = 0;
+            this.buttonAddDiscount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAddDiscount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAddDiscount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonAddDiscount.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddDiscount.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddDiscount.Image")));
+            this.buttonAddDiscount.Location = new System.Drawing.Point(332, 0);
+            this.buttonAddDiscount.Name = "buttonAddDiscount";
+            this.buttonAddDiscount.Size = new System.Drawing.Size(166, 69);
+            this.buttonAddDiscount.TabIndex = 2;
+            this.buttonAddDiscount.Text = "[F3] ADD DISCOUNT";
+            this.buttonAddDiscount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddDiscount.UseVisualStyleBackColor = false;
+            this.buttonAddDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
+            // 
+            // buttonClearItems
+            // 
+            this.buttonClearItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
+            this.buttonClearItems.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClearItems.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonClearItems.Enabled = false;
+            this.buttonClearItems.FlatAppearance.BorderSize = 0;
+            this.buttonClearItems.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonClearItems.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonClearItems.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonClearItems.ForeColor = System.Drawing.Color.Black;
+            this.buttonClearItems.Image = ((System.Drawing.Image)(resources.GetObject("buttonClearItems.Image")));
+            this.buttonClearItems.Location = new System.Drawing.Point(166, 0);
+            this.buttonClearItems.Name = "buttonClearItems";
+            this.buttonClearItems.Size = new System.Drawing.Size(166, 69);
+            this.buttonClearItems.TabIndex = 1;
+            this.buttonClearItems.Text = "[F2] CLEAR ITEMS";
+            this.buttonClearItems.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonClearItems.UseVisualStyleBackColor = false;
+            this.buttonClearItems.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // buttonItemSales
+            // 
+            this.buttonItemSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
+            this.buttonItemSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItemSales.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonItemSales.FlatAppearance.BorderSize = 0;
+            this.buttonItemSales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonItemSales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonItemSales.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonItemSales.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemSales.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemSales.Image")));
+            this.buttonItemSales.Location = new System.Drawing.Point(0, 0);
+            this.buttonItemSales.Name = "buttonItemSales";
+            this.buttonItemSales.Size = new System.Drawing.Size(166, 69);
+            this.buttonItemSales.TabIndex = 0;
+            this.buttonItemSales.Text = "[F1] ITEM SALES";
+            this.buttonItemSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonItemSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonItemSales.UseVisualStyleBackColor = false;
+            this.buttonItemSales.Click += new System.EventHandler(this.btnSale_Click);
+            // 
+            // colAdd
+            // 
+            this.colAdd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colAdd.HeaderText = "";
+            this.colAdd.Image = ((System.Drawing.Image)(resources.GetObject("colAdd.Image")));
+            this.colAdd.MinimumWidth = 6;
+            this.colAdd.Name = "colAdd";
+            this.colAdd.Width = 6;
+            // 
+            // colRemove
+            // 
+            this.colRemove.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colRemove.HeaderText = "";
+            this.colRemove.Image = ((System.Drawing.Image)(resources.GetObject("colRemove.Image")));
+            this.colRemove.MinimumWidth = 6;
+            this.colRemove.Name = "colRemove";
+            this.colRemove.Width = 6;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 6;
+            // 
+            // Select
+            // 
+            this.Select.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Select.HeaderText = "";
+            this.Select.Image = ((System.Drawing.Image)(resources.GetObject("Select.Image")));
+            this.Select.MinimumWidth = 6;
+            this.Select.Name = "Select";
+            this.Select.Width = 6;
+            // 
+            // txtSearchProduct
+            // 
+            // 
+            // 
+            // 
+            this.txtSearchProduct.CustomButton.Image = null;
+            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(335, 1);
+            this.txtSearchProduct.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchProduct.CustomButton.Name = "";
+            this.txtSearchProduct.CustomButton.Size = new System.Drawing.Size(45, 45);
+            this.txtSearchProduct.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearchProduct.CustomButton.TabIndex = 1;
+            this.txtSearchProduct.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearchProduct.CustomButton.UseSelectable = true;
+            this.txtSearchProduct.CustomButton.Visible = false;
+            this.txtSearchProduct.DisplayIcon = true;
+            this.txtSearchProduct.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtSearchProduct.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearchProduct.Icon")));
+            this.txtSearchProduct.Lines = new string[0];
+            this.txtSearchProduct.Location = new System.Drawing.Point(402, 81);
+            this.txtSearchProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchProduct.MaxLength = 32767;
+            this.txtSearchProduct.Name = "txtSearchProduct";
+            this.txtSearchProduct.PasswordChar = '\0';
+            this.txtSearchProduct.PromptText = "SEARCH ITEMS";
+            this.txtSearchProduct.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearchProduct.SelectedText = "";
+            this.txtSearchProduct.SelectionLength = 0;
+            this.txtSearchProduct.SelectionStart = 0;
+            this.txtSearchProduct.ShortcutsEnabled = true;
+            this.txtSearchProduct.Size = new System.Drawing.Size(381, 47);
+            this.txtSearchProduct.TabIndex = 23;
+            this.txtSearchProduct.UseSelectable = true;
+            this.txtSearchProduct.WaterMark = "SEARCH ITEMS";
+            this.txtSearchProduct.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearchProduct.WaterMarkFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchProduct.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
+            // 
+            // txtSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSearch.CustomButton.Image = null;
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(335, 1);
+            this.txtSearch.CustomButton.Name = "";
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(45, 45);
+            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.CustomButton.TabIndex = 1;
+            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearch.CustomButton.UseSelectable = true;
+            this.txtSearch.CustomButton.Visible = false;
+            this.txtSearch.DisplayIcon = true;
+            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(15, 81);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PromptText = "SEARCH BARCODE";
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.ShortcutsEnabled = true;
+            this.txtSearch.Size = new System.Drawing.Size(381, 47);
+            this.txtSearch.TabIndex = 7;
+            this.txtSearch.UseSelectable = true;
+            this.txtSearch.WaterMark = "SEARCH BARCODE";
+            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
+            // 
+            // txtQty
+            // 
+            this.txtQty.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            // 
+            // 
+            // 
+            this.txtQty.CustomButton.Image = null;
+            this.txtQty.CustomButton.Location = new System.Drawing.Point(67, 1);
+            this.txtQty.CustomButton.Name = "";
+            this.txtQty.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.txtQty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtQty.CustomButton.TabIndex = 1;
+            this.txtQty.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtQty.CustomButton.UseSelectable = true;
+            this.txtQty.CustomButton.Visible = false;
+            this.txtQty.Enabled = false;
+            this.txtQty.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtQty.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtQty.Icon = ((System.Drawing.Image)(resources.GetObject("txtQty.Icon")));
+            this.txtQty.Lines = new string[] {
+        "1"};
+            this.txtQty.Location = new System.Drawing.Point(655, 45);
+            this.txtQty.MaxLength = 32767;
+            this.txtQty.Name = "txtQty";
+            this.txtQty.PasswordChar = '\0';
+            this.txtQty.PromptText = "Qty";
+            this.txtQty.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtQty.SelectedText = "";
+            this.txtQty.SelectionLength = 0;
+            this.txtQty.SelectionStart = 0;
+            this.txtQty.ShortcutsEnabled = true;
+            this.txtQty.Size = new System.Drawing.Size(97, 31);
+            this.txtQty.TabIndex = 9;
+            this.txtQty.Text = "1";
+            this.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtQty.UseSelectable = true;
+            this.txtQty.Visible = false;
+            this.txtQty.WaterMark = "Qty";
+            this.txtQty.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtQty.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // frmPOS
             // 
@@ -1508,7 +1510,6 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -1539,11 +1540,11 @@
         private System.Windows.Forms.Label lblDate1;
         private System.Windows.Forms.Label lblTime;
         public System.Windows.Forms.Label lblUser;
-        public System.Windows.Forms.Button btnDiscount;
-        public System.Windows.Forms.Button btnCancel;
-        public System.Windows.Forms.Button button11;
-        public System.Windows.Forms.Button btnSale;
-        public System.Windows.Forms.Button btnNew;
+        public System.Windows.Forms.Button buttonAddDiscount;
+        public System.Windows.Forms.Button buttonClearItems;
+        public System.Windows.Forms.Button buttonQuit;
+        public System.Windows.Forms.Button buttonItemSales;
+        public System.Windows.Forms.Button buttonResumeTransaction;
         public MetroFramework.Controls.MetroTextBox txtQty;
         private MetroFramework.Controls.MetroTextBox txtSearchProduct;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
@@ -1610,9 +1611,9 @@
         private System.Windows.Forms.Label labelChange;
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Button button12;
-        public System.Windows.Forms.Button button13;
-        public System.Windows.Forms.Button button15;
-        public System.Windows.Forms.Button button14;
+        public System.Windows.Forms.Button buttonAddCustomer;
+        public System.Windows.Forms.Button buttonCustomerDetails;
+        public System.Windows.Forms.Button buttonPrintReciept;
+        public System.Windows.Forms.Button buttonPauseTransaction;
     }
 }

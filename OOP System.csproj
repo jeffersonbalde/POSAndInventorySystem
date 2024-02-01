@@ -327,12 +327,24 @@
     <Compile Include="ManageCustomer.Designer.cs">
       <DependentUpon>ManageCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PauseItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PauseItems.Designer.cs">
+      <DependentUpon>PauseItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResumeTransaction.Designer.cs">
+      <DependentUpon>ResumeTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="ReturnItems.cs">
       <SubType>Form</SubType>
@@ -491,6 +503,9 @@
     <EmbeddedResource Include="ManageCustomer.resx">
       <DependentUpon>ManageCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PauseItems.resx">
+      <DependentUpon>PauseItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -499,6 +514,9 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="ResumeTransaction.resx">
+      <DependentUpon>ResumeTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReturnItems.resx">
       <DependentUpon>ReturnItems.cs</DependentUpon>
     </EmbeddedResource>

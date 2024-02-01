@@ -423,5 +423,10 @@ namespace OOP_System
             frm.BringToFront();
             frm.Show();
         }
+
+        private void lblRole_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

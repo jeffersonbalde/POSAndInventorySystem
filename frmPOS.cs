@@ -109,6 +109,8 @@ namespace OOP_System
         private void frmPOS_Load(object sender, EventArgs e)
         {
             LoadRecords();
+            GetTransNo();
+            this.ActiveControl = txtSearch;
         }
 
         public void LoadRecords()
@@ -165,15 +167,19 @@ namespace OOP_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.Rows.Count > 0)
-            {
-                MessageBox.Show("You have pending items in your current transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if(dataGridView1.Rows.Count > 0)
+            //{
+            //    MessageBox.Show("You have pending items in your current transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
 
-            GetTransNo();
-            txtSearch.Enabled = true;
-            txtSearch.Focus();
+            //GetTransNo();
+            //txtSearch.Enabled = true;
+            //txtSearch.Focus();
+
+            ResumeTransaction frm = new ResumeTransaction(this);
+            frm.LoadPauseTransaction();
+            frm.ShowDialog();
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -392,13 +398,13 @@ namespace OOP_System
                 if(hasrecord == true)
                 {
                     //btnPayment.Enabled = true;
-                    btnDiscount.Enabled = true;
-                    btnCancel.Enabled = true;
+                    buttonAddDiscount.Enabled = true;
+                    buttonClearItems.Enabled = true;
                 }else
                 {
                     //btnPayment.Enabled = false;
-                    btnDiscount.Enabled = false;
-                    btnCancel.Enabled = false;
+                    buttonAddDiscount.Enabled = false;
+                    buttonClearItems.Enabled = false;
                 }
 
             }catch(Exception ex)
@@ -666,7 +672,7 @@ namespace OOP_System
             }
             else if (e.KeyCode == Keys.F2)
             {
-                if(btnDiscount.Enabled == true)
+                if(buttonAddDiscount.Enabled == true)
                 {
                     btnDiscount_Click(sender, e);
                 }
@@ -688,7 +694,7 @@ namespace OOP_System
             //}
             else if (e.KeyCode == Keys.F4)
             {
-                if (btnCancel.Enabled == true)
+                if (buttonClearItems.Enabled == true)
                 {
                     btnCancel_Click(sender, e);
                 }
@@ -1049,6 +1055,7 @@ namespace OOP_System
                     GetTransNo();
                     LoadCart();
                     LoadRecords();
+                    txtSearch.Focus();
                 }
 
             }
