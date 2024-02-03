@@ -803,7 +803,7 @@ namespace OOP_System
                     frm.ProductDetails(dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString(), Double.Parse(dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString()), lblTransno.Text, int.Parse(dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString()));
                     frm.ShowDialog();
 
-                    frmAddDebt frmDebt = new frmAddDebt(this, null, frmAddC);
+                    //frmAddDebt frmDebt = new frmAddDebt(this, null, frmAddC);
                     //frmDebt.DebtProductDetails(dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString(), Double.Parse(dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString()), lblTransno.Text, int.Parse(dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString()), double.Parse(dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString()));
 
                 }
@@ -1107,6 +1107,14 @@ namespace OOP_System
             {
                 MessageBox.Show(ex.Message, "CONVENIENCE STORE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void buttonPrintReciept_Click(object sender, EventArgs e)
+        {
+            CashierReturnItems frm = new CashierReturnItems(this);
+            frm.cboCashier.Text = lblUser.Text;
+            frm.LoadRecord();
+            frm.ShowDialog();
         }
     }
 }

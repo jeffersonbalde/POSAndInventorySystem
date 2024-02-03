@@ -96,6 +96,12 @@
     <Compile Include="CashierItemSales.Designer.cs">
       <DependentUpon>CashierItemSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashierReturnItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierReturnItems.Designer.cs">
+      <DependentUpon>CashierReturnItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompletePayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CashierItemSales.resx">
       <DependentUpon>CashierItemSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierReturnItems.resx">
+      <DependentUpon>CashierReturnItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompletePayment.resx">
       <DependentUpon>CompletePayment.cs</DependentUpon>

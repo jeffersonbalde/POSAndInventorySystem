@@ -12,12 +12,17 @@ namespace OOP_System
 {
     public partial class frmCancelDetails : Form
     {
-        CashierItemSales f;
+        CashierReturnItems f;
 
-        public frmCancelDetails(CashierItemSales frm)
+        public frmCancelDetails(CashierReturnItems frm)
         {
             InitializeComponent();
             f = frm;
+        }
+
+        public void RefreshCart2()
+        {
+            f.RefreshCart();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -124,6 +129,28 @@ namespace OOP_System
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void txtCancelQty_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //accept only numbers
+            if (e.KeyChar == 46)
+            {
+                //accept . character
+            }
+            else if (e.KeyChar == 8)
+            {
+                //accept backspace
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57)) //accept code 48-57 between 0-9
+            {
+                e.Handled = true;
             }
         }
     }

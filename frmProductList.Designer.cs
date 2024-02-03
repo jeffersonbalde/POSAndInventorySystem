@@ -71,8 +71,6 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -137,7 +135,7 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Visible = false;
-            this.Column2.Width = 98;
+            this.Column2.Width = 110;
             // 
             // Column8
             // 
@@ -268,12 +266,11 @@
             // 
             // btnAddItem
             // 
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(243)))), ((int)(((byte)(216)))));
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.Black;
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
             this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddItem.Location = new System.Drawing.Point(19, 555);
             this.btnAddItem.Name = "btnAddItem";
@@ -343,12 +340,11 @@
             // 
             // ButtonMCategory
             // 
-            this.ButtonMCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(232)))));
+            this.ButtonMCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.ButtonMCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonMCategory.FlatAppearance.BorderSize = 0;
-            this.ButtonMCategory.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ButtonMCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonMCategory.ForeColor = System.Drawing.Color.Black;
+            this.ButtonMCategory.ForeColor = System.Drawing.Color.White;
             this.ButtonMCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonMCategory.Location = new System.Drawing.Point(193, 555);
             this.ButtonMCategory.Name = "ButtonMCategory";
@@ -360,12 +356,11 @@
             // 
             // ButtonSItem
             // 
-            this.ButtonSItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(237)))), ((int)(((byte)(253)))));
+            this.ButtonSItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.ButtonSItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSItem.FlatAppearance.BorderSize = 0;
-            this.ButtonSItem.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ButtonSItem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSItem.ForeColor = System.Drawing.Color.Black;
+            this.ButtonSItem.ForeColor = System.Drawing.Color.White;
             this.ButtonSItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonSItem.Location = new System.Drawing.Point(367, 554);
             this.ButtonSItem.Name = "ButtonSItem";
@@ -377,12 +372,11 @@
             // 
             // ButtonSAdjustment
             // 
-            this.ButtonSAdjustment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.ButtonSAdjustment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.ButtonSAdjustment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSAdjustment.FlatAppearance.BorderSize = 0;
-            this.ButtonSAdjustment.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ButtonSAdjustment.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSAdjustment.ForeColor = System.Drawing.Color.Black;
+            this.ButtonSAdjustment.ForeColor = System.Drawing.Color.White;
             this.ButtonSAdjustment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonSAdjustment.Location = new System.Drawing.Point(541, 554);
             this.ButtonSAdjustment.Name = "ButtonSAdjustment";
@@ -411,12 +405,11 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(715, 554);
             this.button1.Name = "button1";

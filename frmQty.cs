@@ -62,6 +62,15 @@ namespace OOP_System
                 e.Handled = true;
             }
 
+            //if(int.Parse(txtQty.Text) == 0 || txtQty.Text == String.Empty)
+            //{
+            //    MessageBox.Show("Invalid quantity");
+            //    txtQty.Clear();
+            //    return;
+            //}
+
+
+
             try
             {
                 if((e.KeyChar == 13) && (txtQty.Text != String.Empty))

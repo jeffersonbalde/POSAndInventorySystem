@@ -115,13 +115,13 @@
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.buttonQuit = new System.Windows.Forms.Button();
-            this.buttonPrintReciept = new System.Windows.Forms.Button();
             this.buttonResumeTransaction = new System.Windows.Forms.Button();
             this.buttonPauseTransaction = new System.Windows.Forms.Button();
             this.buttonCustomerDetails = new System.Windows.Forms.Button();
             this.buttonAddCustomer = new System.Windows.Forms.Button();
             this.buttonAddDiscount = new System.Windows.Forms.Button();
             this.buttonClearItems = new System.Windows.Forms.Button();
+            this.buttonPrintReciept = new System.Windows.Forms.Button();
             this.buttonItemSales = new System.Windows.Forms.Button();
             this.colAdd = new System.Windows.Forms.DataGridViewImageColumn();
             this.colRemove = new System.Windows.Forms.DataGridViewImageColumn();
@@ -443,7 +443,7 @@
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 15F);
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 13F);
             dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
@@ -489,7 +489,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "#";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 58;
+            this.dataGridViewTextBoxColumn1.Width = 54;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -506,7 +506,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "BARCODE";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 152;
+            this.dataGridViewTextBoxColumn3.Width = 137;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -521,7 +521,7 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "PRICE";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 107;
+            this.dataGridViewTextBoxColumn7.Width = 97;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -529,7 +529,7 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "QTY";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 88;
+            this.dataGridViewTextBoxColumn8.Width = 81;
             // 
             // panel3
             // 
@@ -589,13 +589,13 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.buttonQuit);
-            this.panel4.Controls.Add(this.buttonPrintReciept);
             this.panel4.Controls.Add(this.buttonResumeTransaction);
             this.panel4.Controls.Add(this.buttonPauseTransaction);
             this.panel4.Controls.Add(this.buttonCustomerDetails);
             this.panel4.Controls.Add(this.buttonAddCustomer);
             this.panel4.Controls.Add(this.buttonAddDiscount);
             this.panel4.Controls.Add(this.buttonClearItems);
+            this.panel4.Controls.Add(this.buttonPrintReciept);
             this.panel4.Controls.Add(this.buttonItemSales);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 759);
@@ -1138,25 +1138,6 @@
             this.buttonQuit.UseVisualStyleBackColor = false;
             this.buttonQuit.Click += new System.EventHandler(this.button11_Click);
             // 
-            // buttonPrintReciept
-            // 
-            this.buttonPrintReciept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
-            this.buttonPrintReciept.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPrintReciept.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonPrintReciept.FlatAppearance.BorderSize = 0;
-            this.buttonPrintReciept.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonPrintReciept.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonPrintReciept.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonPrintReciept.ForeColor = System.Drawing.Color.Black;
-            this.buttonPrintReciept.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintReciept.Image")));
-            this.buttonPrintReciept.Location = new System.Drawing.Point(1162, 0);
-            this.buttonPrintReciept.Name = "buttonPrintReciept";
-            this.buttonPrintReciept.Size = new System.Drawing.Size(166, 69);
-            this.buttonPrintReciept.TabIndex = 7;
-            this.buttonPrintReciept.Text = "[F8] PRINT RECIEPT";
-            this.buttonPrintReciept.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPrintReciept.UseVisualStyleBackColor = false;
-            // 
             // buttonResumeTransaction
             // 
             this.buttonResumeTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
@@ -1168,18 +1149,18 @@
             this.buttonResumeTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonResumeTransaction.ForeColor = System.Drawing.Color.Black;
             this.buttonResumeTransaction.Image = ((System.Drawing.Image)(resources.GetObject("buttonResumeTransaction.Image")));
-            this.buttonResumeTransaction.Location = new System.Drawing.Point(996, 0);
+            this.buttonResumeTransaction.Location = new System.Drawing.Point(1162, 0);
             this.buttonResumeTransaction.Name = "buttonResumeTransaction";
             this.buttonResumeTransaction.Size = new System.Drawing.Size(166, 69);
             this.buttonResumeTransaction.TabIndex = 6;
-            this.buttonResumeTransaction.Text = "[F7] RESUME TRANSACTION";
+            this.buttonResumeTransaction.Text = "[F8] RESUME TRANSACTION";
             this.buttonResumeTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonResumeTransaction.UseVisualStyleBackColor = false;
             this.buttonResumeTransaction.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonPauseTransaction
             // 
-            this.buttonPauseTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
+            this.buttonPauseTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(179)))));
             this.buttonPauseTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPauseTransaction.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonPauseTransaction.FlatAppearance.BorderSize = 0;
@@ -1188,11 +1169,11 @@
             this.buttonPauseTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonPauseTransaction.ForeColor = System.Drawing.Color.Black;
             this.buttonPauseTransaction.Image = ((System.Drawing.Image)(resources.GetObject("buttonPauseTransaction.Image")));
-            this.buttonPauseTransaction.Location = new System.Drawing.Point(830, 0);
+            this.buttonPauseTransaction.Location = new System.Drawing.Point(996, 0);
             this.buttonPauseTransaction.Name = "buttonPauseTransaction";
             this.buttonPauseTransaction.Size = new System.Drawing.Size(166, 69);
             this.buttonPauseTransaction.TabIndex = 5;
-            this.buttonPauseTransaction.Text = "[F6] PAUSE TRANSACTION";
+            this.buttonPauseTransaction.Text = "[F7] PAUSE TRANSACTION";
             this.buttonPauseTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPauseTransaction.UseVisualStyleBackColor = false;
             this.buttonPauseTransaction.Click += new System.EventHandler(this.button14_Click);
@@ -1208,11 +1189,11 @@
             this.buttonCustomerDetails.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonCustomerDetails.ForeColor = System.Drawing.Color.Black;
             this.buttonCustomerDetails.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomerDetails.Image")));
-            this.buttonCustomerDetails.Location = new System.Drawing.Point(664, 0);
+            this.buttonCustomerDetails.Location = new System.Drawing.Point(830, 0);
             this.buttonCustomerDetails.Name = "buttonCustomerDetails";
             this.buttonCustomerDetails.Size = new System.Drawing.Size(166, 69);
             this.buttonCustomerDetails.TabIndex = 4;
-            this.buttonCustomerDetails.Text = "[F5] CUSTOMER DETAILS";
+            this.buttonCustomerDetails.Text = "[F6] CUSTOMER DETAILS";
             this.buttonCustomerDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCustomerDetails.UseVisualStyleBackColor = false;
             this.buttonCustomerDetails.Click += new System.EventHandler(this.button13_Click);
@@ -1228,18 +1209,18 @@
             this.buttonAddCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAddCustomer.ForeColor = System.Drawing.Color.Black;
             this.buttonAddCustomer.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddCustomer.Image")));
-            this.buttonAddCustomer.Location = new System.Drawing.Point(498, 0);
+            this.buttonAddCustomer.Location = new System.Drawing.Point(664, 0);
             this.buttonAddCustomer.Name = "buttonAddCustomer";
             this.buttonAddCustomer.Size = new System.Drawing.Size(166, 69);
             this.buttonAddCustomer.TabIndex = 3;
-            this.buttonAddCustomer.Text = "[F4] ADD CUSTOMER";
+            this.buttonAddCustomer.Text = "[F5] ADD CUSTOMER";
             this.buttonAddCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddCustomer.UseVisualStyleBackColor = false;
             this.buttonAddCustomer.Click += new System.EventHandler(this.button12_Click);
             // 
             // buttonAddDiscount
             // 
-            this.buttonAddDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
+            this.buttonAddDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
             this.buttonAddDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddDiscount.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonAddDiscount.Enabled = false;
@@ -1249,11 +1230,11 @@
             this.buttonAddDiscount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAddDiscount.ForeColor = System.Drawing.Color.Black;
             this.buttonAddDiscount.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddDiscount.Image")));
-            this.buttonAddDiscount.Location = new System.Drawing.Point(332, 0);
+            this.buttonAddDiscount.Location = new System.Drawing.Point(498, 0);
             this.buttonAddDiscount.Name = "buttonAddDiscount";
             this.buttonAddDiscount.Size = new System.Drawing.Size(166, 69);
             this.buttonAddDiscount.TabIndex = 2;
-            this.buttonAddDiscount.Text = "[F3] ADD DISCOUNT";
+            this.buttonAddDiscount.Text = "[F4] ADD DISCOUNT";
             this.buttonAddDiscount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddDiscount.UseVisualStyleBackColor = false;
             this.buttonAddDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
@@ -1270,14 +1251,34 @@
             this.buttonClearItems.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.buttonClearItems.ForeColor = System.Drawing.Color.Black;
             this.buttonClearItems.Image = ((System.Drawing.Image)(resources.GetObject("buttonClearItems.Image")));
-            this.buttonClearItems.Location = new System.Drawing.Point(166, 0);
+            this.buttonClearItems.Location = new System.Drawing.Point(332, 0);
             this.buttonClearItems.Name = "buttonClearItems";
             this.buttonClearItems.Size = new System.Drawing.Size(166, 69);
             this.buttonClearItems.TabIndex = 1;
-            this.buttonClearItems.Text = "[F2] CLEAR ITEMS";
+            this.buttonClearItems.Text = "[F3] CLEAR ITEMS";
             this.buttonClearItems.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonClearItems.UseVisualStyleBackColor = false;
             this.buttonClearItems.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // buttonPrintReciept
+            // 
+            this.buttonPrintReciept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
+            this.buttonPrintReciept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPrintReciept.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonPrintReciept.FlatAppearance.BorderSize = 0;
+            this.buttonPrintReciept.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPrintReciept.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPrintReciept.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonPrintReciept.ForeColor = System.Drawing.Color.Black;
+            this.buttonPrintReciept.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintReciept.Image")));
+            this.buttonPrintReciept.Location = new System.Drawing.Point(166, 0);
+            this.buttonPrintReciept.Name = "buttonPrintReciept";
+            this.buttonPrintReciept.Size = new System.Drawing.Size(166, 69);
+            this.buttonPrintReciept.TabIndex = 7;
+            this.buttonPrintReciept.Text = "[F2] ITEM VOID";
+            this.buttonPrintReciept.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPrintReciept.UseVisualStyleBackColor = false;
+            this.buttonPrintReciept.Click += new System.EventHandler(this.buttonPrintReciept_Click);
             // 
             // buttonItemSales
             // 

@@ -11,25 +11,22 @@ using System.Windows.Forms;
 
 namespace OOP_System
 {
-    public partial class CashierItemSales : Form
+    public partial class CashierReturnItems : Form
     {
+
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
         DBConnection dbcon = new DBConnection();
         SqlDataReader dr;
 
-        frmSoldItems frmS;
-        frmAddDebt frmAdd;
 
+        frmPOS fpos;
 
-        public CashierItemSales(frmSoldItems form)
+        public CashierReturnItems(frmPOS form)
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
-
-            frmS = form;
-
-            this.KeyPreview = true;
+            fpos = form;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,21 +34,31 @@ namespace OOP_System
             this.Dispose();
         }
 
-        public void LoadCashier()
+        public void RefreshCart()
         {
-            cboCashier.Items.Clear();
-            cboCashier.Items.Add("All");
-            cn.Open();
-            string query = "SELECT name from tblUser WHERE role = 'Cashier'";
-            string query1 = "SELECT name from tblUser";
-            cm = new SqlCommand(query1, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            fpos.LoadRecords();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dataGridView1.Columns[e.ColumnIndex].Name;
+
+            if (colName == "colCancel")
             {
-                cboCashier.Items.Add(dr["name"].ToString());
+                frmCancelDetails f = new frmCancelDetails(this);
+                //f.txtID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                f.txtTransnoNo.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                f.txtPCode.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                f.txtDescription.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                f.txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                f.txtQty.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                f.txtDiscount.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                f.txtTotal.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                f.txtCancel.Text = cboCashier.Text;
+
+                f.ShowDialog();
             }
-            dr.Close();
-            cn.Close();
         }
 
         public void LoadRecord()
@@ -103,88 +110,11 @@ namespace OOP_System
                 }
                 dr.Close();
                 cn.Close();
-                lblTotal.Text = _total.ToString("#,##0.00");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //string colName = dataGridView1.Columns[e.ColumnIndex].Name;
-
-            //if (colName == "colCancel")
-            //{
-            //    frmCancelDetails f = new frmCancelDetails(this);
-            //    f.txtID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //    f.txtTransnoNo.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //    f.txtPCode.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            //    f.txtDescription.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //    f.txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            //    f.txtQty.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            //    f.txtDiscount.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            //    f.txtTotal.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-
-            //    f.txtCancel.Text = cboCashier.Text;
-
-            //    f.ShowDialog();
-            //}
-        }
-
-        private void btnAddItem_Click(object sender, EventArgs e)
-        {
-            frmViewDebt frm = new frmViewDebt();
-            frm.LoadCustomer();
-            frm.DefaultCustomerDebtTotal();
-            frm.cboCashier.Text = "All";
-            frm.LoadCustomerName();
-            frm.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            CustomerDetails frm = new CustomerDetails();
-            frm.LoadCustomerInformation();
-            frm.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            CompletePayment frm = new CompletePayment(this, null);
-            frm.LoadCustomerName();
-            frm.ShowDialog();
-        }
-
-        private void CashierItemSales_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Dispose();
-            }
-            else if (e.KeyCode == Keys.F1)
-            {
-                btnAddItem_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F2)
-            {
-                button2_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F3)
-            {
-                button3_Click(sender, e);
-            }
-        }
-
-        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadRecord();
-        }
-
-        private void comboBoxCategory_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
         }
     }
 }
