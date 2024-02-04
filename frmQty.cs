@@ -62,19 +62,16 @@ namespace OOP_System
                 e.Handled = true;
             }
 
-            //if(int.Parse(txtQty.Text) == 0 || txtQty.Text == String.Empty)
-            //{
-            //    MessageBox.Show("Invalid quantity");
-            //    txtQty.Clear();
-            //    return;
-            //}
-
-
-
             try
             {
-                if((e.KeyChar == 13) && (txtQty.Text != String.Empty))
+                if((e.KeyChar == 13) && (txtQty.Text != String.Empty) && (int.Parse(txtQty.Text) > 0))
                 {
+                    //if (int.Parse(txtQty.Text) == 0 || txtQty.Text == String.Empty)
+                    //{
+                    //    MessageBox.Show("Invalid quantity");
+                    //    txtQty.Clear();
+                    //    return;
+                    //}
 
                     bool found = false;
                     string pcode1 = "";
@@ -150,8 +147,13 @@ namespace OOP_System
                         this.Dispose();
                     }
 
-                }
-    
+                } 
+                //{
+                //    MessageBox.Show("Invalid quantity");
+                //    txtQty.Clear();
+                //    return;
+                //}
+
             }
             catch(Exception ex)
             {
