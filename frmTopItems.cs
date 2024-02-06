@@ -39,11 +39,11 @@ namespace OOP_System
                 int i = 0;
                 cn.Open();
                 dataGridView1.Rows.Clear();
-                if (cboSort.Text == "QUANTITY")
+                if (cboSort.Text == "Quantity")
                 {
                     cm = new SqlCommand("SELECT pcode, pdesc, ISNULL(SUM(qty),0) AS qty, ISNULL(SUM(total),0) AS total FROM vwSoldItems WHERE sdate BETWEEN '" + dt1.Value.ToString("yyyy-MM-dd") + "' AND '" + dt2.Value.ToString("yyyy-MM-dd") + "' AND status LIKE 'Sold' GROUP BY pcode, pdesc ORDER BY qty DESC", cn);
                 }
-                else if (cboSort.Text == "TOTAL")
+                else if (cboSort.Text == "Total")
                 {
                     cm = new SqlCommand("SELECT pcode, pdesc, ISNULL(SUM(qty),0) AS qty, ISNULL(SUM(total),0) AS total FROM vwSoldItems WHERE sdate BETWEEN '" + dt1.Value.ToString("yyyy-MM-dd") + "' AND '" + dt2.Value.ToString("yyyy-MM-dd") + "' AND status LIKE 'Sold' GROUP BY pcode, pdesc ORDER BY total DESC", cn);
                 }
@@ -70,7 +70,7 @@ namespace OOP_System
             catch (Exception ex)
             {
                 cn.Close();
-                MessageBox.Show(ex.Message, "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "TOP ITEMS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

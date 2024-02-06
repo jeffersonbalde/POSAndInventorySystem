@@ -37,6 +37,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dt2 = new System.Windows.Forms.DateTimePicker();
+            this.dt1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +50,6 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dt2 = new System.Windows.Forms.DateTimePicker();
-            this.dt1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 48);
+            this.panel1.Size = new System.Drawing.Size(1138, 48);
             this.panel1.TabIndex = 25;
             // 
             // button1
@@ -74,7 +74,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1028, 0);
+            this.button1.Location = new System.Drawing.Point(1088, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 48);
             this.button1.TabIndex = 5;
@@ -90,7 +90,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "RETURN ITEMS";
+            this.label1.Text = "ITEM RETURNS";
             // 
             // dataGridView5
             // 
@@ -104,9 +104,9 @@
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -126,7 +126,7 @@
             this.Column16});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -134,7 +134,7 @@
             this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView5.EnableHeadersVisualStyles = false;
             this.dataGridView5.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            this.dataGridView5.Location = new System.Drawing.Point(8, 94);
+            this.dataGridView5.Location = new System.Drawing.Point(8, 95);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.RowHeadersWidth = 51;
@@ -142,8 +142,41 @@
             this.dataGridView5.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView5.RowTemplate.Height = 24;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(1058, 483);
+            this.dataGridView5.Size = new System.Drawing.Size(1118, 485);
             this.dataGridView5.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
+            this.label5.Location = new System.Drawing.Point(3, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 35);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Filter By Date";
+            // 
+            // dt2
+            // 
+            this.dt2.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.dt2.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.dt2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt2.Location = new System.Drawing.Point(435, 50);
+            this.dt2.Name = "dt2";
+            this.dt2.Size = new System.Drawing.Size(252, 36);
+            this.dt2.TabIndex = 29;
+            this.dt2.ValueChanged += new System.EventHandler(this.dt2_ValueChanged);
+            // 
+            // dt1
+            // 
+            this.dt1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.dt1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.dt1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt1.Location = new System.Drawing.Point(177, 50);
+            this.dt1.Name = "dt1";
+            this.dt1.Size = new System.Drawing.Size(252, 36);
+            this.dt1.TabIndex = 28;
+            this.dt1.ValueChanged += new System.EventHandler(this.dt1_ValueChanged);
             // 
             // dataGridViewTextBoxColumn21
             // 
@@ -151,7 +184,7 @@
             this.dataGridViewTextBoxColumn21.HeaderText = "#";
             this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 51;
+            this.dataGridViewTextBoxColumn21.Width = 54;
             // 
             // dataGridViewTextBoxColumn22
             // 
@@ -159,7 +192,8 @@
             this.dataGridViewTextBoxColumn22.HeaderText = "REFERENCE NO.";
             this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Width = 167;
+            this.dataGridViewTextBoxColumn22.Visible = false;
+            this.dataGridViewTextBoxColumn22.Width = 196;
             // 
             // Column10
             // 
@@ -168,7 +202,7 @@
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.Visible = false;
-            this.Column10.Width = 98;
+            this.Column10.Width = 109;
             // 
             // dataGridViewTextBoxColumn23
             // 
@@ -183,7 +217,7 @@
             this.Column11.HeaderText = "PRICE";
             this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
-            this.Column11.Width = 86;
+            this.Column11.Width = 97;
             // 
             // dataGridViewTextBoxColumn24
             // 
@@ -193,7 +227,7 @@
             this.dataGridViewTextBoxColumn24.HeaderText = "QTY";
             this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 72;
+            this.dataGridViewTextBoxColumn24.Width = 81;
             // 
             // Column12
             // 
@@ -201,7 +235,7 @@
             this.Column12.HeaderText = "TOTAL";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
-            this.Column12.Width = 89;
+            this.Column12.Width = 102;
             // 
             // Column13
             // 
@@ -209,7 +243,7 @@
             this.Column13.HeaderText = "DATE";
             this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
-            this.Column13.Width = 82;
+            this.Column13.Width = 90;
             // 
             // Column14
             // 
@@ -217,58 +251,28 @@
             this.Column14.HeaderText = "NAME";
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
-            this.Column14.Width = 90;
+            this.Column14.Width = 102;
             // 
             // Column16
             // 
             this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column16.HeaderText = "TO INVENTORY";
+            this.Column16.HeaderText = "B. TO INVENTORY";
             this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
-            this.Column16.Width = 161;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(3, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 30);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "FILTER BY DATE ";
-            // 
-            // dt2
-            // 
-            this.dt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.dt2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt2.Location = new System.Drawing.Point(390, 54);
-            this.dt2.Name = "dt2";
-            this.dt2.Size = new System.Drawing.Size(210, 34);
-            this.dt2.TabIndex = 29;
-            this.dt2.ValueChanged += new System.EventHandler(this.dt2_ValueChanged);
-            // 
-            // dt1
-            // 
-            this.dt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.dt1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt1.Location = new System.Drawing.Point(174, 54);
-            this.dt1.Name = "dt1";
-            this.dt1.Size = new System.Drawing.Size(210, 34);
-            this.dt1.TabIndex = 28;
-            this.dt1.ValueChanged += new System.EventHandler(this.dt1_ValueChanged);
+            this.Column16.Width = 215;
             // 
             // frmReturnItems
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1078, 589);
+            this.ClientSize = new System.Drawing.Size(1138, 589);
             this.ControlBox = false;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dt2);
             this.Controls.Add(this.dt1);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.Name = "frmReturnItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmReturnItems_Load);
@@ -287,6 +291,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.DateTimePicker dt2;
+        public System.Windows.Forms.DateTimePicker dt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
@@ -297,8 +304,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.DateTimePicker dt2;
-        public System.Windows.Forms.DateTimePicker dt1;
     }
 }

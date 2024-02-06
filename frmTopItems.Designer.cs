@@ -93,56 +93,61 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(584, 61);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
+            this.label2.Location = new System.Drawing.Point(574, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 30);
+            this.label2.Size = new System.Drawing.Size(98, 35);
             this.label2.TabIndex = 29;
-            this.label2.Text = "SORT BY";
+            this.label2.Text = "Sort By";
             // 
             // cboSort
             // 
             this.cboSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.cboSort.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.cboSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
             this.cboSort.FormattingEnabled = true;
             this.cboSort.Items.AddRange(new object[] {
-            "QUANTITY",
-            "TOTAL"});
-            this.cboSort.Location = new System.Drawing.Point(677, 59);
+            "Quantity",
+            "Total"});
+            this.cboSort.Location = new System.Drawing.Point(658, 56);
             this.cboSort.Name = "cboSort";
-            this.cboSort.Size = new System.Drawing.Size(177, 37);
+            this.cboSort.Size = new System.Drawing.Size(196, 43);
             this.cboSort.TabIndex = 28;
             this.cboSort.SelectedIndexChanged += new System.EventHandler(this.cboSort_SelectedIndexChanged);
             // 
             // dt2
             // 
-            this.dt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.dt2.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
+            this.dt2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
             this.dt2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt2.Location = new System.Drawing.Point(333, 60);
+            this.dt2.Location = new System.Drawing.Point(343, 58);
             this.dt2.Name = "dt2";
-            this.dt2.Size = new System.Drawing.Size(177, 34);
+            this.dt2.Size = new System.Drawing.Size(196, 41);
             this.dt2.TabIndex = 27;
             this.dt2.ValueChanged += new System.EventHandler(this.dt2_ValueChanged);
             // 
             // dt1
             // 
-            this.dt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dt1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
+            this.dt1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
             this.dt1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt1.Location = new System.Drawing.Point(150, 61);
+            this.dt1.Location = new System.Drawing.Point(141, 58);
             this.dt1.Name = "dt1";
-            this.dt1.Size = new System.Drawing.Size(177, 34);
+            this.dt1.Size = new System.Drawing.Size(196, 41);
             this.dt1.TabIndex = 26;
             this.dt1.ValueChanged += new System.EventHandler(this.dt1_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
             this.label5.Location = new System.Drawing.Point(5, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 30);
+            this.label5.Size = new System.Drawing.Size(168, 35);
             this.label5.TabIndex = 25;
-            this.label5.Text = "FILTER BY DATE";
+            this.label5.Text = "Filter By Date";
             // 
             // dataGridView1
             // 
@@ -156,14 +161,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -198,7 +203,7 @@
             this.Column1.HeaderText = "#";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 51;
+            this.Column1.Width = 54;
             // 
             // Column5
             // 
@@ -224,7 +229,7 @@
             this.Column8.HeaderText = "QUANTITY";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
-            this.Column8.Width = 124;
+            this.Column8.Width = 144;
             // 
             // Column17
             // 
@@ -234,7 +239,7 @@
             this.Column17.HeaderText = "TOTAL";
             this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
-            this.Column17.Width = 89;
+            this.Column17.Width = 102;
             // 
             // frmTopItems
             // 
@@ -249,7 +254,7 @@
             this.Controls.Add(this.dt1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.Name = "frmTopItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTopItems_KeyDown);

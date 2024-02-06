@@ -39,6 +39,7 @@ namespace OOP_System
         {
             //txtUser.Focus();
             //this.ActiveControl = txtUser;
+            this.ActiveControl = textBoxPassword;
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
 
@@ -333,6 +334,18 @@ namespace OOP_System
             else
             {
                 textBoxPassword.Text = textBoxPassword.Text.Substring(0, length - 1);
+            }
+        }
+
+        private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                //accept backspace
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57)) //accept code 48-57 between 0-9
+            {
+                e.Handled = true;
             }
         }
     }

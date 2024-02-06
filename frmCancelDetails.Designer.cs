@@ -67,7 +67,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 40);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Sold Item";
+            this.label3.Text = "Item Sold";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtTransnoNo
@@ -201,7 +201,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(143, 40);
             this.label10.TabIndex = 20;
-            this.label10.Text = "Void Item";
+            this.label10.Text = "Item Void";
             // 
             // txtCancel
             // 
@@ -209,7 +209,7 @@
             this.txtCancel.Font = new System.Drawing.Font("Segoe UI", 16.2F);
             this.txtCancel.Location = new System.Drawing.Point(225, 355);
             this.txtCancel.Name = "txtCancel";
-            this.txtCancel.Size = new System.Drawing.Size(204, 43);
+            this.txtCancel.Size = new System.Drawing.Size(230, 43);
             this.txtCancel.TabIndex = 23;
             // 
             // label12
@@ -228,7 +228,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.label14.Location = new System.Drawing.Point(465, 357);
+            this.label14.Location = new System.Drawing.Point(510, 357);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(199, 38);
             this.label14.TabIndex = 26;
@@ -252,7 +252,7 @@
             this.txtCancelQty.Font = new System.Drawing.Font("Segoe UI", 16.2F);
             this.txtCancelQty.Location = new System.Drawing.Point(225, 422);
             this.txtCancelQty.Name = "txtCancelQty";
-            this.txtCancelQty.Size = new System.Drawing.Size(204, 43);
+            this.txtCancelQty.Size = new System.Drawing.Size(230, 43);
             this.txtCancelQty.TabIndex = 30;
             this.txtCancelQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCancelQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCancelQty_KeyPress);

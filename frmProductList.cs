@@ -29,7 +29,7 @@ namespace OOP_System
             form1 = frm;
             frm.GetDashboard();
 
-            this.KeyPreview = true;
+            //this.KeyPreview = true;
             GetTotalItem();
             LoadRecords();
         }
@@ -138,7 +138,7 @@ namespace OOP_System
                     LoadRecords();
                     form1.GetDashboard();
                     GetTotalItem();
-                    MessageBox.Show("Item deleted.", "DELETE ITEM", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Item deleted.", "DELETE ITEM", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -205,33 +205,33 @@ namespace OOP_System
             frm.ShowDialog();
         }
 
-        private void frmProductList_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Dispose();
-            }
-            else if (e.KeyCode == Keys.F1)
-            {
-                btnAddItem_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F2)
-            {
-                ButtonMCategory_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F3)
-            {
-                ButtonSItem_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F4)
-            {
-                ButtonSAdjustment_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F5)
-            {
-                button1_Click_2(sender, e);
-            }
-        }
+        //private void frmProductList_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Escape)
+        //    {
+        //        this.Dispose();
+        //    }
+        //    else if (e.KeyCode == Keys.F1)
+        //    {
+        //        btnAddItem_Click(sender, e);
+        //    }
+        //    else if (e.KeyCode == Keys.F2)
+        //    {
+        //        ButtonMCategory_Click(sender, e);
+        //    }
+        //    else if (e.KeyCode == Keys.F3)
+        //    {
+        //        ButtonSItem_Click(sender, e);
+        //    }
+        //    else if (e.KeyCode == Keys.F4)
+        //    {
+        //        ButtonSAdjustment_Click(sender, e);
+        //    }
+        //    else if (e.KeyCode == Keys.F5)
+        //    {
+        //        button1_Click_2(sender, e);
+        //    }
+        //}
 
         public void LoadCategory()
         {

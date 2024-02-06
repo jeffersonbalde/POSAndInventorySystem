@@ -171,11 +171,11 @@
             // 
             // buttonEnter
             // 
-            this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.buttonEnter.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.buttonEnter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEnter.FlatAppearance.BorderSize = 0;
             this.buttonEnter.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
-            this.buttonEnter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(239)))));
+            this.buttonEnter.ForeColor = System.Drawing.Color.White;
             this.buttonEnter.Location = new System.Drawing.Point(329, 218);
             this.buttonEnter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEnter.Name = "buttonEnter";

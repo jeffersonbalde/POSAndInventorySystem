@@ -80,7 +80,7 @@ namespace OOP_System
 
                 if(textBoxItem.Text == "")
                 {
-                    MessageBox.Show("Please select an item", "STOCK ADJUSTMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please select an item", "QUANTITY ADJUSTMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -88,7 +88,7 @@ namespace OOP_System
                 {
                     if (int.Parse(txtQuantity.Text) > _qty)
                     {
-                        MessageBox.Show("Quantity should be less than the item quantity", "QUANTITY INVALID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Quantity should be less than the item quantity", "QUANTITY INVALID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtQuantity.Focus();
                         return;
                     }

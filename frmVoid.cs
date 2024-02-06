@@ -216,7 +216,7 @@ namespace OOP_System
 
                 if (adminPin != textBoxPassword.Text)
                 {
-                    MessageBox.Show("The PIN is incorrect. Try again.");
+                    MessageBox.Show("The PIN is incorrect. Try again.", "VOID FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBoxPassword.Clear();
                     return;
                 }
@@ -241,7 +241,7 @@ namespace OOP_System
             }
             else
             {
-                MessageBox.Show("Fill up all form");
+                MessageBox.Show("Please enter admin pin", "VOID FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

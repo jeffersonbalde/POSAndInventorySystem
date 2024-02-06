@@ -179,7 +179,7 @@ namespace OOP_System
                 
                 if((double.Parse(txtChange.Text) < 0) || (txtCash.Text == String.Empty))
                 {
-                    MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }else
                 {
@@ -197,7 +197,7 @@ namespace OOP_System
                     
                     frm.ShowDialog();
 
-                    MessageBox.Show("Payment successfully saved!", "ALL J GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Payment successfully saved!", "PAYMENT SAVED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     fpos.GetTransNo();
                     fpos.LoadCart();
                     fpos.LoadRecords();
@@ -206,7 +206,7 @@ namespace OOP_System
 
             }catch(Exception ex)
             {
-                MessageBox.Show("Insufficient Amount!", "ALL J GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

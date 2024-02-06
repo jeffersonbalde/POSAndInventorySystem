@@ -99,7 +99,7 @@ namespace OOP_System
                         UpdateData("UPDATE tblcart SET qty = qty - " + int.Parse(txtCancelQty.Text) + " WHERE pcode LIKE '" + txtPCode.Text + "'");
 
 
-                        MessageBox.Show("Return Successfully", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Return Successfully", "Item Return", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frm.LoadRecord();
 
                         if(form1 != null)
@@ -111,19 +111,24 @@ namespace OOP_System
                     }
                     else
                     {
-                        MessageBox.Show("Quantity Invalid", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Quantity Invalid", "Item Return", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please fill the form", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please fill up all fields", "Item Return", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Item Return", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

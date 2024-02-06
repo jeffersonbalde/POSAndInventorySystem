@@ -58,7 +58,6 @@
             this.ButtonMCategory = new System.Windows.Forms.Button();
             this.ButtonSItem = new System.Windows.Forms.Button();
             this.ButtonSAdjustment = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -242,14 +241,15 @@
             this.txtSearch.CustomButton.Visible = false;
             this.txtSearch.DisplayIcon = true;
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
             this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
             this.txtSearch.Lines = new string[0];
             this.txtSearch.Location = new System.Drawing.Point(0, 0);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PromptText = "ITEM";
+            this.txtSearch.PromptText = "Search Item";
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearch.SelectedText = "";
             this.txtSearch.SelectionLength = 0;
@@ -258,9 +258,9 @@
             this.txtSearch.Size = new System.Drawing.Size(434, 42);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.UseSelectable = true;
-            this.txtSearch.WaterMark = "ITEM";
+            this.txtSearch.WaterMark = "Search Item";
             this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
             // 
@@ -269,39 +269,39 @@
             this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddItem.ForeColor = System.Drawing.Color.White;
             this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddItem.Location = new System.Drawing.Point(19, 555);
+            this.btnAddItem.Location = new System.Drawing.Point(19, 553);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(168, 44);
+            this.btnAddItem.Size = new System.Drawing.Size(206, 50);
             this.btnAddItem.TabIndex = 7;
-            this.btnAddItem.Text = "F1 - ADD ITEM";
+            this.btnAddItem.Text = "Add Item";
             this.btnAddItem.UseVisualStyleBackColor = false;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // labelSearch
             // 
             this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
             this.labelSearch.Location = new System.Drawing.Point(12, 18);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(95, 30);
+            this.labelSearch.Size = new System.Drawing.Size(91, 35);
             this.labelSearch.TabIndex = 8;
-            this.labelSearch.Text = "SEARCH";
+            this.labelSearch.Text = "Search";
             this.labelSearch.Click += new System.EventHandler(this.labelSearch_Click);
             // 
             // lblFilterByCategory
             // 
             this.lblFilterByCategory.AutoSize = true;
-            this.lblFilterByCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilterByCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
             this.lblFilterByCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
-            this.lblFilterByCategory.Location = new System.Drawing.Point(570, 17);
+            this.lblFilterByCategory.Location = new System.Drawing.Point(572, 17);
             this.lblFilterByCategory.Name = "lblFilterByCategory";
-            this.lblFilterByCategory.Size = new System.Drawing.Size(223, 30);
+            this.lblFilterByCategory.Size = new System.Drawing.Size(219, 35);
             this.lblFilterByCategory.TabIndex = 9;
-            this.lblFilterByCategory.Text = "FILTER BY CATEGORY";
+            this.lblFilterByCategory.Text = "Filter By Category";
             this.lblFilterByCategory.Click += new System.EventHandler(this.lblFilterByCategory_Click);
             // 
             // comboBoxCategory
@@ -319,9 +319,9 @@
             // 
             this.labelTotalItem.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold);
             this.labelTotalItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(16)))), ((int)(((byte)(164)))));
-            this.labelTotalItem.Location = new System.Drawing.Point(171, 482);
+            this.labelTotalItem.Location = new System.Drawing.Point(19, 482);
             this.labelTotalItem.Name = "labelTotalItem";
-            this.labelTotalItem.Size = new System.Drawing.Size(729, 60);
+            this.labelTotalItem.Size = new System.Drawing.Size(881, 60);
             this.labelTotalItem.TabIndex = 11;
             this.labelTotalItem.Text = "00";
             this.labelTotalItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -343,14 +343,14 @@
             this.ButtonMCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.ButtonMCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonMCategory.FlatAppearance.BorderSize = 0;
-            this.ButtonMCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonMCategory.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.ButtonMCategory.ForeColor = System.Drawing.Color.White;
             this.ButtonMCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonMCategory.Location = new System.Drawing.Point(193, 555);
+            this.ButtonMCategory.Location = new System.Drawing.Point(228, 553);
             this.ButtonMCategory.Name = "ButtonMCategory";
-            this.ButtonMCategory.Size = new System.Drawing.Size(168, 44);
+            this.ButtonMCategory.Size = new System.Drawing.Size(206, 50);
             this.ButtonMCategory.TabIndex = 13;
-            this.ButtonMCategory.Text = "F2 - M. CATEGORY";
+            this.ButtonMCategory.Text = "Manage Category";
             this.ButtonMCategory.UseVisualStyleBackColor = false;
             this.ButtonMCategory.Click += new System.EventHandler(this.ButtonMCategory_Click);
             // 
@@ -359,14 +359,14 @@
             this.ButtonSItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.ButtonSItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSItem.FlatAppearance.BorderSize = 0;
-            this.ButtonSItem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSItem.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.ButtonSItem.ForeColor = System.Drawing.Color.White;
             this.ButtonSItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSItem.Location = new System.Drawing.Point(367, 554);
+            this.ButtonSItem.Location = new System.Drawing.Point(438, 553);
             this.ButtonSItem.Name = "ButtonSItem";
-            this.ButtonSItem.Size = new System.Drawing.Size(168, 44);
+            this.ButtonSItem.Size = new System.Drawing.Size(206, 50);
             this.ButtonSItem.TabIndex = 14;
-            this.ButtonSItem.Text = "F3 - ADD QUANTITY";
+            this.ButtonSItem.Text = "Add Quantity";
             this.ButtonSItem.UseVisualStyleBackColor = false;
             this.ButtonSItem.Click += new System.EventHandler(this.ButtonSItem_Click);
             // 
@@ -375,47 +375,30 @@
             this.ButtonSAdjustment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.ButtonSAdjustment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSAdjustment.FlatAppearance.BorderSize = 0;
-            this.ButtonSAdjustment.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSAdjustment.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.ButtonSAdjustment.ForeColor = System.Drawing.Color.White;
             this.ButtonSAdjustment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSAdjustment.Location = new System.Drawing.Point(541, 554);
+            this.ButtonSAdjustment.Location = new System.Drawing.Point(649, 553);
             this.ButtonSAdjustment.Name = "ButtonSAdjustment";
-            this.ButtonSAdjustment.Size = new System.Drawing.Size(168, 44);
+            this.ButtonSAdjustment.Size = new System.Drawing.Size(206, 50);
             this.ButtonSAdjustment.TabIndex = 15;
-            this.ButtonSAdjustment.Text = "F4 - Q. ADJUSTMENT";
+            this.ButtonSAdjustment.Text = "Quantity Adjustment";
             this.ButtonSAdjustment.UseVisualStyleBackColor = false;
             this.ButtonSAdjustment.Click += new System.EventHandler(this.ButtonSAdjustment_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(101)))), ((int)(((byte)(103)))));
-            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(121)))), ((int)(((byte)(103)))));
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClose.Location = new System.Drawing.Point(914, 554);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(151, 44);
-            this.buttonClose.TabIndex = 18;
-            this.buttonClose.Text = "ESC - CLOSE";
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(715, 554);
+            this.button1.Location = new System.Drawing.Point(859, 553);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 44);
+            this.button1.Size = new System.Drawing.Size(206, 50);
             this.button1.TabIndex = 19;
-            this.button1.Text = "F5 - LOW STOCKS";
+            this.button1.Text = "Low Stocks";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
@@ -445,7 +428,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1086, 610);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.ButtonSAdjustment);
             this.Controls.Add(this.ButtonSItem);
             this.Controls.Add(this.ButtonMCategory);
@@ -463,7 +445,6 @@
             this.Name = "frmProductList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmProductList_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmProductList_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -484,7 +465,6 @@
         public System.Windows.Forms.Button ButtonMCategory;
         public System.Windows.Forms.Button ButtonSItem;
         public System.Windows.Forms.Button ButtonSAdjustment;
-        public System.Windows.Forms.Button buttonClose;
         public System.Windows.Forms.ComboBox comboBoxCategory;
         public System.Windows.Forms.Label labelTotalItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

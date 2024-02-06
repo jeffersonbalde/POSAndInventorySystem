@@ -153,7 +153,6 @@ namespace OOP_System
                     cm.Parameters.AddWithValue("@cid", cid);
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Item saved.", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Clear();
                     flist.LoadRecords();
                     flist.GetTotalItem();

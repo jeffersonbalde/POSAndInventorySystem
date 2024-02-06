@@ -27,6 +27,8 @@ namespace OOP_System
             cn = new SqlConnection(dbcon.MyConnection());
 
             rt = form;
+
+            this.KeyPreview = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,6 +62,14 @@ namespace OOP_System
             {
                 cn.Close();
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void PauseItems_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Dispose();
             }
         }
     }

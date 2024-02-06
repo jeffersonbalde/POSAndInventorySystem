@@ -251,18 +251,18 @@ namespace OOP_System
         {
             if(txtPercent.Text == "")
             {
-                MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Insufficient Amount!", "ADD DISCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (double.Parse(txtAmount.Text) < 0)
             {
-                MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Insufficient Amount!", "ADD DISCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
-                if (MessageBox.Show("Add discount? Click yes to confirm.", "ALL J GENERAL MERCHANDISE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Add discount? Click yes to confirm.", "ADD DISCOUNT", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
                     string query = "UPDATE tblcart SET disc = @disc WHERE id = @id";

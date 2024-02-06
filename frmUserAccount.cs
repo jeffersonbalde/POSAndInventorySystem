@@ -32,14 +32,23 @@ namespace OOP_System
             this.Dispose();
         }
 
+        //private void Clear()
+        //{
+        //    txtName.Clear();
+        //    txtPass.Clear();
+        //    txtRetype.Clear();
+        //    txtPin.Clear();
+        //    cboUserType.Text = "";
+        //    txtPin.Focus();
+        //}
+
+
         private void Clear()
         {
+            txtPin.Clear();
+            cboUserType.Text = "";
             txtName.Clear();
-            txtPass.Clear();
-            txtRetype.Clear();
-            txtUser.Clear();
-            cboRole.Text = "";
-            txtUser.Focus();
+            txtPin.Focus();
         }
 
         private void metroTabControl1_Resize(object sender, EventArgs e)
@@ -73,44 +82,44 @@ namespace OOP_System
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        //private void btnSave_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
 
-                if (txtName.Text == "" || txtPass.Text == "" || txtRetype.Text == "" || txtUser.Text == "" || cboRole.Text == "")
-                {
-                    MessageBox.Show("Please fill up all fields", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+        //        if (txtName.Text == "" || txtPass.Text == "" || txtRetype.Text == "" || txtPin.Text == "" || cboUserType.Text == "")
+        //        {
+        //            MessageBox.Show("Please fill up all fields", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            return;
+        //        }
 
-                if (txtPass.Text != txtRetype.Text)
-                {
-                    MessageBox.Show("Please make sure your passwords match.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+        //        if (txtPass.Text != txtRetype.Text)
+        //        {
+        //            MessageBox.Show("Please make sure your passwords match.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            return;
+        //        }
 
-                cn.Open();
-                string query = "INSERT INTO tblUser(username, password, role, name) VALUES(@username, @password, @role, @name)";
-                cm = new SqlCommand(query, cn);
-                cm.Parameters.AddWithValue("@username", txtUser.Text);
-                cm.Parameters.AddWithValue("@password", txtPass.Text);
-                cm.Parameters.AddWithValue("@role", cboRole.Text);
-                cm.Parameters.AddWithValue("@name", txtName.Text);
-                cm.ExecuteNonQuery();
-                cn.Close();
+        //        cn.Open();
+        //        string query = "INSERT INTO tblUser(username, password, role, name) VALUES(@username, @password, @role, @name)";
+        //        cm = new SqlCommand(query, cn);
+        //        cm.Parameters.AddWithValue("@username", txtPin.Text);
+        //        cm.Parameters.AddWithValue("@password", txtPass.Text);
+        //        cm.Parameters.AddWithValue("@role", cboUserType.Text);
+        //        cm.Parameters.AddWithValue("@name", txtName.Text);
+        //        cm.ExecuteNonQuery();
+        //        cn.Close();
 
-                LoadUsername();
-                LoadUsernameDelete();
-                Clear();
-                MessageBox.Show("Account saved.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        LoadUsername();
+        //        LoadUsernameDelete();
+        //        Clear();
+        //        MessageBox.Show("Account saved.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
-            }catch(Exception ex)
-            {
-                cn.Close();
-                MessageBox.Show(ex.Message);
-            }
-        }
+        //    }catch(Exception ex)
+        //    {
+        //        cn.Close();
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -131,14 +140,14 @@ namespace OOP_System
         {
             try
             {
-                comboBoxUsername.Items.Clear();
+                txtPin2.Items.Clear();
                 cn.Open();
                 string query = "SELECT * FROM tblUser";
                 cm = new SqlCommand(query, cn);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
-                    comboBoxUsername.Items.Add(dr["username"].ToString());
+                    txtPin2.Items.Add(dr["username"].ToString());
                 }
                 dr.Close();
                 cn.Close();
@@ -151,18 +160,69 @@ namespace OOP_System
             }
         }
 
+
+
+        public void LoadUsernamePin()
+        {
+            try
+            {
+                txtPin2.Items.Clear();
+                cn.Open();
+                string query = "SELECT * FROM Pin";
+                cm = new SqlCommand(query, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    txtPin2.Items.Add(dr["Name"].ToString());
+                }
+                dr.Close();
+                cn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
         public void LoadUsernameDelete()
         {
             try
             {
-                comboBoxDeleteUsername.Items.Clear();
+                cboDeletePin.Items.Clear();
                 cn.Open();
                 string query = "SELECT * FROM tblUser";
                 cm = new SqlCommand(query, cn);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
-                    comboBoxDeleteUsername.Items.Add(dr["username"].ToString());
+                    cboDeletePin.Items.Add(dr["username"].ToString());
+                }
+                dr.Close();
+                cn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void LoadPinDelete()
+        {
+            try
+            {
+                cboDeletePin.Items.Clear();
+                cn.Open();
+                string query = "SELECT * FROM Pin";
+                cm = new SqlCommand(query, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    cboDeletePin.Items.Add(dr["Name"].ToString());
                 }
                 dr.Close();
                 cn.Close();
@@ -179,23 +239,57 @@ namespace OOP_System
         {
             try
             {
-                comboBoxDeleteUsername.Items.Clear();
+                cboDeletePin.Items.Clear();
                 LoadUsernameDelete();
 
                 if (MessageBox.Show("Deleting your account will remove your access to the system. This can’t be undone.", "DELETE ACCOUNT", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     cn.Open();
-                    string query = "DELETE FROM tblUser WHERE username LIKE '" + comboBoxDeleteUsername.Text + "'";
+                    string query = "DELETE FROM tblUser WHERE username LIKE '" + cboDeletePin.Text + "'";
                     cm = new SqlCommand(query, cn);
                     cm.ExecuteNonQuery();
                     dr.Close();
                     cn.Close();
 
                     LoadUsernameDelete();
-                    MessageBox.Show("Account " + comboBoxDeleteUsername.Text + " has been deleted.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    comboBoxDeleteUsername.Text = "";
-                    comboBoxDeleteUsername.Focus();
+                    MessageBox.Show("Account " + cboDeletePin.Text + " has been deleted.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboDeletePin.Text = "";
+                    cboDeletePin.Focus();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void DeletePin()
+        {
+            try
+            {
+                cboDeletePin.Items.Clear();
+                //LoadUsernameDelete();
+                LoadPinDelete();
+
+                if (MessageBox.Show("Deleting your pin will remove your access to the system. This can’t be undone.", "DELETE PIN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    cn.Open();
+                    string query = "DELETE FROM Pin WHERE Name LIKE '" + cboDeletePin.Text + "'";
+                    cm = new SqlCommand(query, cn);
+                    cm.ExecuteNonQuery();
+                    dr.Close();
+                    cn.Close();
+
+                    //LoadUsernameDelete();
+                    LoadPinDelete();
+                    LoadUsernamePin();
+                    MessageBox.Show("Pin " + cboDeletePin.Text + " has been deleted.", "PIN DELETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboDeletePin.Text = "";
+                    cboDeletePin.Focus();
 
                 }
             }
@@ -211,7 +305,7 @@ namespace OOP_System
             try
             {
                 cn.Open();
-                string query = "SELECT password FROM tblUser WHERE username LIKE '" + comboBoxUsername.Text + "'";
+                string query = "SELECT password FROM tblUser WHERE username LIKE '" + txtPin2.Text + "'";
                 cm = new SqlCommand(query, cn);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
@@ -235,7 +329,7 @@ namespace OOP_System
             {
                 string oldPass = "";
                 cn.Open();
-                string query = "SELECT password FROM tblUser WHERE username LIKE '" + comboBoxUsername.Text + "'";
+                string query = "SELECT password FROM tblUser WHERE username LIKE '" + txtPin2.Text + "'";
                 cm = new SqlCommand(query, cn);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
@@ -245,34 +339,88 @@ namespace OOP_System
                 dr.Close();
                 cn.Close();
 
-                if (textBoxOldPassword.Text != oldPass)
+                if (txtOldPin.Text != oldPass)
                 {
                     MessageBox.Show("Old password don't match.");
                     return;
                 }
 
-                if (textBoxNewPassword.Text != textBoxConfirmPassword.Text)
+                if (txtNewPin.Text != txtConfirmPin.Text)
                 {
                     MessageBox.Show("Please make sure your passwords match.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                comboBoxUsername.Items.Clear();
+                txtPin2.Items.Clear();
                 LoadUsername();
                 cn.Open();
-                string query1 = "UPDATE tblUser SET password = '" + textBoxNewPassword.Text + "' WHERE username LIKE '" + comboBoxUsername.Text + "'";
+                string query1 = "UPDATE tblUser SET password = '" + txtNewPin.Text + "' WHERE username LIKE '" + txtPin2.Text + "'";
                 cm = new SqlCommand(query1, cn);
                 cm.ExecuteNonQuery();
                 cn.Close();
 
                 LoadUsername();
-                MessageBox.Show("Password to " + comboBoxUsername.Text + " has been changed.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Password to " + txtPin2.Text + " has been changed.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                comboBoxUsername.Text = "";
-                textBoxOldPassword.Text = "";
-                textBoxNewPassword.Text = "";
-                textBoxConfirmPassword.Text = "";
-                comboBoxUsername.Focus();
+                txtPin2.Text = "";
+                txtOldPin.Text = "";
+                txtNewPin.Text = "";
+                txtConfirmPin.Text = "";
+                txtPin2.Focus();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void UpdatePinPassword()
+        {
+            try
+            {
+                string oldPass = "";
+                cn.Open();
+                string query = "SELECT Pin FROM Pin WHERE Name LIKE '" + txtPin2.Text + "'";
+                cm = new SqlCommand(query, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    oldPass = dr["Pin"].ToString();
+                }
+                dr.Close();
+                cn.Close();
+
+                if (txtOldPin.Text != oldPass)
+                {
+                    MessageBox.Show("Old pin don't match.", "CHANGE PIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (txtNewPin.Text != txtConfirmPin.Text)
+                {
+                    MessageBox.Show("Please make sure your pin match.", "CHANGE PIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                txtPin2.Items.Clear();
+                LoadUsernamePin();
+                //LoadUsername();
+                cn.Open();
+                string query1 = "UPDATE Pin SET Pin = '" + txtNewPin.Text + "' WHERE Name LIKE '" + txtPin2.Text + "'";
+                cm = new SqlCommand(query1, cn);
+                cm.ExecuteNonQuery();
+                cn.Close();
+
+                LoadUsernamePin();
+                //LoadUsername();
+                MessageBox.Show("Pin " + txtPin2.Text + " has been changed.", "CHANGE PIN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtPin2.Text = "";
+                txtOldPin.Text = "";
+                txtNewPin.Text = "";
+                txtConfirmPin.Text = "";
+                txtPin2.Focus();
             }
             catch (Exception ex)
             {
@@ -283,7 +431,7 @@ namespace OOP_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if(comboBoxDeleteUsername.Text == "")
+            if(cboDeletePin.Text == "")
             {
                 MessageBox.Show("Please select username", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -295,7 +443,7 @@ namespace OOP_System
         private void buttonSaveNewPassword_Click(object sender, EventArgs e)
         {
 
-            if (textBoxConfirmPassword.Text == "" || textBoxNewPassword.Text == "" || textBoxOldPassword.Text == "" || comboBoxUsername.Text == "")
+            if (txtConfirmPin.Text == "" || txtNewPin.Text == "" || txtOldPin.Text == "" || txtPin2.Text == "")
             {
                 MessageBox.Show("Please fill up all fields", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -328,33 +476,34 @@ namespace OOP_System
             try
             {
 
-                if (txtName.Text == "" || txtPass.Text == "" || txtRetype.Text == "" || txtUser.Text == "" || cboRole.Text == "")
+                if (txtName.Text == "" || txtPin.Text == "" || cboUserType.Text == "")
                 {
-                    MessageBox.Show("Please fill up all fields", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please fill up all fields", "CREATE PIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (txtPass.Text != txtRetype.Text)
-                {
-                    MessageBox.Show("Please make sure your passwords match.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                //if (txtPass.Text != txtRetype.Text)
+                //{
+                //    MessageBox.Show("Please make sure your passwords match.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    return;
+                //}
 
                 cn.Open();
-                string query = "INSERT INTO tblUser(username, password, role, name) VALUES(@username, @password, @role, @name)";
+                string query = "INSERT INTO Pin(Pin, Type, Name) VALUES(@Pin, @Type, @Name)";
                 cm = new SqlCommand(query, cn);
-                cm.Parameters.AddWithValue("@username", txtUser.Text);
-                cm.Parameters.AddWithValue("@password", txtPass.Text);
-                cm.Parameters.AddWithValue("@role", cboRole.Text);
-                cm.Parameters.AddWithValue("@name", txtName.Text);
+                cm.Parameters.AddWithValue("@Pin", txtPin.Text);
+                cm.Parameters.AddWithValue("@Type", cboUserType.Text);
+                cm.Parameters.AddWithValue("@Name", txtName.Text);
                 cm.ExecuteNonQuery();
                 cn.Close();
 
-                LoadUsername();
-                LoadUsernameDelete();
+                //LoadUsername();
+                //LoadUsernameDelete();
+                LoadUsernamePin();
+                LoadPinDelete();
                 Clear();
                 LoadAccounts();
-                MessageBox.Show("Account saved.", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pin saved.", "CREATE PIN", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -371,24 +520,25 @@ namespace OOP_System
 
         private void frmUserAccount_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = txtUser;
+            this.ActiveControl = txtPin;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBoxConfirmPassword.Text == "" || textBoxNewPassword.Text == "" || textBoxOldPassword.Text == "" || comboBoxUsername.Text == "")
+            if (txtConfirmPin.Text == "" || txtNewPin.Text == "" || txtOldPin.Text == "" || txtPin2.Text == "")
             {
-                MessageBox.Show("Please fill up all fields", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill up all fields", "CHANGE PIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             LoadAccounts();
-            UpdatePassword();
+            //UpdatePassword();
+            UpdatePinPassword();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (comboBoxDeleteUsername.Text == "")
+            if (cboDeletePin.Text == "")
             {
                 MessageBox.Show("Please select username", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -444,19 +594,54 @@ namespace OOP_System
             }
         }
 
+        public void LoadPinAccounts()
+        {
+            try
+            {
+
+                cn.Open();
+                int i = 0;
+                dataGridView1.Rows.Clear();
+                string query = "SELECT * FROM Pin";
+
+                cm = new SqlCommand(query, cn);
+                dr = cm.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    i++;
+                    dataGridView1.Rows.Add(i, dr["Name"].ToString(), dr["Pin"].ToString(), dr["Type"].ToString());
+                }
+                dr.Close();
+                cn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
-            if (comboBoxDeleteUsername.Text == "")
+            if (cboDeletePin.Text == "")
             {
-                MessageBox.Show("Please select username", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select Name in the combobox", "DELETE PIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            DeleteUsername();
-            LoadAccounts();
-            LoadUsernameDelete();
-            LoadUsername();
+            //DeleteUsername();
+            //LoadAccounts();
+            //LoadUsernameDelete();
+            //LoadUsername();
+            DeletePin();
+            LoadUsernamePin();
+            LoadPinDelete();
+            LoadPinAccounts();
         }
+
+        
 
         private void button5_Click_1(object sender, EventArgs e)
         {
@@ -471,6 +656,54 @@ namespace OOP_System
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                //accept backspace
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57)) //accept code 48-57 between 0-9
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtOldPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                //accept backspace
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57)) //accept code 48-57 between 0-9
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNewPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                //accept backspace
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57)) //accept code 48-57 between 0-9
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtConfirmPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                //accept backspace
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57)) //accept code 48-57 between 0-9
+            {
+                e.Handled = true;
+            }
         }
     }
 }

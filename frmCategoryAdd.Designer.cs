@@ -92,34 +92,34 @@
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(182)))), ((int)(((byte)(114)))));
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.FlatAppearance.BorderSize = 0;
-            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(255, 185);
+            this.buttonAdd.Location = new System.Drawing.Point(323, 170);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(176, 44);
             this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "ADD";
+            this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // txtCategory
             // 
-            this.txtCategory.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategory.Location = new System.Drawing.Point(66, 121);
+            this.txtCategory.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.txtCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.txtCategory.Location = new System.Drawing.Point(18, 105);
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(365, 36);
+            this.txtCategory.Size = new System.Drawing.Size(481, 41);
             this.txtCategory.TabIndex = 0;
             this.txtCategory.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.label2.Location = new System.Drawing.Point(61, 81);
+            this.label2.Location = new System.Drawing.Point(12, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 28);
+            this.label2.Size = new System.Drawing.Size(189, 35);
             this.label2.TabIndex = 7;
             this.label2.Text = "Category Name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -129,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(511, 270);
+            this.ClientSize = new System.Drawing.Size(511, 226);
             this.ControlBox = false;
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.buttonAdd);

@@ -87,9 +87,9 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.label6.Location = new System.Drawing.Point(3, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 32);
+            this.label6.Size = new System.Drawing.Size(173, 32);
             this.label6.TabIndex = 0;
-            this.label6.Text = "REPORTS";
+            this.label6.Text = "SALES REPORT";
             // 
             // panel2
             // 

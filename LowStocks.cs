@@ -23,6 +23,8 @@ namespace OOP_System
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
+
+            this.KeyPreview = true;
         }
 
         public void GetLowStocks()
@@ -65,6 +67,14 @@ namespace OOP_System
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             GetLowStocks();
+        }
+
+        private void LowStocks_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Dispose();
+            }
         }
     }
 }

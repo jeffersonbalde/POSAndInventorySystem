@@ -120,11 +120,7 @@ namespace OOP_System
         {
             if (e.KeyCode == Keys.Escape)
             {
-                button2_Click_1(sender, e);
-            }
-            else if (e.KeyCode == Keys.F1)
-            {
-                btnUpdate_Click(sender, e);
+                this.Dispose();
             }
         }
 

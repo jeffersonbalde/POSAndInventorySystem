@@ -31,6 +31,8 @@ namespace OOP_System
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
             fpos = frmpos;
+
+            this.KeyPreview = true;
         }
 
         private void frmQty_Load(object sender, EventArgs e)
@@ -165,6 +167,14 @@ namespace OOP_System
         private void txtQty_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmQty_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Dispose();
+            }
         }
     }
 }

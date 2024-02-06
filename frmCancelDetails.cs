@@ -117,12 +117,12 @@ namespace OOP_System
                     }
                     else
                     {
-                        MessageBox.Show("Quantity Invalid", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Quantity Invalid", "QUANTITY INVALID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please fill the form", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please fill up all fields", "SAVE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

@@ -182,15 +182,7 @@ namespace OOP_System
         {
             if (e.KeyCode == Keys.Escape)
             {
-                exitbtn_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F1)
-            {
-                btnSave_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.Enter)
-            {
-                button2_Click(sender, e);
+                this.Dispose();
             }
         }
 
@@ -282,7 +274,6 @@ namespace OOP_System
                     cm = new SqlCommand(query, cn);
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Item removed.", "REMOVE ITEM", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadStockIn();
                 }
             }

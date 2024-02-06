@@ -23,7 +23,7 @@ namespace OOP_System
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
 
-            this.KeyPreview = true;
+            //this.KeyPreview = true;
         }
 
         public void LoadCustomerName()
@@ -153,24 +153,24 @@ namespace OOP_System
             }
         }
 
-        private void ManageCustomer_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Dispose();
-            }
-            else if (e.KeyCode == Keys.F1)
-            {
-                btnAddItem_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F2)
-            {
-                ButtonMCategory_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.F3)
-            {
-                ButtonSItem_Click(sender, e);
-            }
-        }
+        //private void ManageCustomer_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Escape)
+        //    {
+        //        this.Dispose();
+        //    }
+        //    else if (e.KeyCode == Keys.F1)
+        //    {
+        //        btnAddItem_Click(sender, e);
+        //    }
+        //    else if (e.KeyCode == Keys.F2)
+        //    {
+        //        ButtonMCategory_Click(sender, e);
+        //    }
+        //    else if (e.KeyCode == Keys.F3)
+        //    {
+        //        ButtonSItem_Click(sender, e);
+        //    }
+        //}
     }
 }

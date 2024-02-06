@@ -90,8 +90,6 @@ namespace OOP_System
                         cm.Parameters.AddWithValue("@sdate", slist.dt2.Value);
                         cm.ExecuteNonQuery();
                         cn.Close();
-
-                        MessageBox.Show("Item added.", "ADD ITEM", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         slist.LoadStockIn();
                     }
                 }

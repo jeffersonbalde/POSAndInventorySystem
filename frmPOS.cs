@@ -483,14 +483,13 @@ namespace OOP_System
 
             if (colName == "Delete")
             {
-                if (MessageBox.Show("Remove this item?", "ALL J GENERAL MERCHANDISE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Remove this item?", "ITEM REMOVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cn.Open();
                     string query = "DELETE FROM tblcart WHERE id LIKE '" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'";
                     cm = new SqlCommand(query, cn);
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Item has been removed", "ALL J GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadCart();
                 }
             }
@@ -542,7 +541,7 @@ namespace OOP_System
                 }
                 else
                 {
-                    MessageBox.Show("Insufficient item, Remaining item is " + i + " ", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Insufficient item, Remaining item is " + i + " ", "ITEM INVALID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -604,7 +603,7 @@ namespace OOP_System
 
                 if (dataGridView1.Rows.Count > 0)
                 {
-                    MessageBox.Show("You have pending items in your current transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You have pending items in your current transaction", "QUIT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 else
@@ -620,12 +619,12 @@ namespace OOP_System
             {
                 if (dataGridView1.Rows.Count > 0)
                 {
-                    MessageBox.Show("You have pending items in your current transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You have pending items in your current transaction", "QUIT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
-                    if (MessageBox.Show("Are you sure you want to log out and close the application?", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure you want to log out and close the application?", "QUIT", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         this.Dispose();
                         frmSecurity frmLogin = new frmSecurity();
@@ -668,18 +667,19 @@ namespace OOP_System
         {
             if(e.KeyCode == Keys.F1)
             {
-                button1_Click(sender, e);
+                btnSale_Click(sender, e);
             }
             else if (e.KeyCode == Keys.F2)
             {
-                if(buttonAddDiscount.Enabled == true)
-                {
-                    btnDiscount_Click(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("You have no transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //if(buttonAddDiscount.Enabled == true)
+                //{
+                //    btnDiscount_Click(sender, e);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("You have no transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
+                buttonPrintReciept_Click(sender, e);
             }
             //else if (e.KeyCode == Keys.F3)
             //{
@@ -692,20 +692,31 @@ namespace OOP_System
             //        MessageBox.Show("You have no transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //    }
             //}
-            else if (e.KeyCode == Keys.F4)
+            else if(e.KeyCode == Keys.F3)
             {
-                if (buttonClearItems.Enabled == true)
+                if(dataGridView1.Rows.Count <= 0)
                 {
-                    btnCancel_Click(sender, e);
+                    MessageBox.Show("You have no transaction", "CLEAR ITEMS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("You have no transaction", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    btnCancel_Click(sender, e);
+                }
+            }
+            else if (e.KeyCode == Keys.F4)
+            {
+                if (dataGridView1.Rows.Count <= 0)
+                {
+                    MessageBox.Show("You have no transaction", "ADD DISCOUNT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    btnDiscount_Click(sender, e);
                 }
             }
             else if (e.KeyCode == Keys.F5)
             {
-                btnSale_Click(sender, e);
+                button12_Click(sender, e);
             }
             else if(e.KeyCode == Keys.Escape)
             {
@@ -713,13 +724,24 @@ namespace OOP_System
             }
             else if(e.KeyCode == Keys.F6)
             {
-                txtSearchProduct.Focus();
-
+                button13_Click(sender, e);
+            }
+            else if(e.KeyCode == Keys.F7)
+            {
+                button14_Click(sender, e);
+            }
+            else if(e.KeyCode == Keys.F8)
+            {
+                button1_Click(sender, e);
             }
             else if (e.KeyCode == Keys.F9)
             {
                 txtSearch.SelectionStart = 0;
                 txtSearch.SelectionLength = txtSearch.Text.Length;
+            }
+            else if(e.KeyCode == Keys.Enter)
+            {
+                buttonPay_Click(sender, e);
             }
         }
 
@@ -731,14 +753,13 @@ namespace OOP_System
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure you want to clear items? ", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if(MessageBox.Show("Are you sure you want to clear items? ", "CLEAR ITEMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 cn.Open();
                 string query = "DELETE FROM tblcart WHERE transno LIKE '" + lblTransno.Text + "'";
                 cm = new SqlCommand(query, cn);
                 cm.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("Items Removed!", "ALL J SHOP GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadCart();
             }
         }
@@ -1022,14 +1043,14 @@ namespace OOP_System
             {
                 if(dataGridView1.Rows.Count == 0)
                 {
-                    MessageBox.Show("You have no transaction, please select an item", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You have no transaction, please select an item", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBoxCash.Clear();
                     return;
                 }
 
                 if ((double.Parse(labelChange.Text) < 0) || (textBoxCash.Text == String.Empty))
                 {
-                    MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Insufficient Amount!", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
@@ -1050,7 +1071,7 @@ namespace OOP_System
 
                     frm.ShowDialog();
 
-                    MessageBox.Show("Payment successfully saved!", "CONVENIENCE STORE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Payment successfully saved!", "PAYMENT SAVED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBoxCash.Clear();
                     GetTransNo();
                     LoadCart();
@@ -1061,7 +1082,7 @@ namespace OOP_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ALL J GENERAL MERCHANDISE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1085,7 +1106,7 @@ namespace OOP_System
             {
                 if (dataGridView1.Rows.Count == 0)
                 {
-                    MessageBox.Show("You have no transaction to pause", "PAYMENT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You have no transaction to pause", "PAUSE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBoxCash.Clear();
                     return;
                 }
@@ -1115,6 +1136,16 @@ namespace OOP_System
             frm.cboCashier.Text = lblUser.Text;
             frm.LoadRecord();
             frm.ShowDialog();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

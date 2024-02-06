@@ -37,13 +37,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dt2 = new System.Windows.Forms.DateTimePicker();
-            this.dt1 = new System.Windows.Forms.DateTimePicker();
-            this.cboCashier = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +51,10 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCancel = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dt2 = new System.Windows.Forms.DateTimePicker();
+            this.dt1 = new System.Windows.Forms.DateTimePicker();
+            this.cboCashier = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -69,17 +69,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1025, 48);
             this.panel1.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(171)))), ((int)(((byte)(227)))));
-            this.label1.Location = new System.Drawing.Point(10, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ITEM VOID";
             // 
             // button1
             // 
@@ -96,6 +85,17 @@
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(171)))), ((int)(((byte)(227)))));
+            this.label1.Location = new System.Drawing.Point(10, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ITEM VOID";
             // 
             // dataGridView1
             // 
@@ -152,50 +152,6 @@
             this.dataGridView1.TabIndex = 30;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(10, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 40);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Select Item";
-            // 
-            // dt2
-            // 
-            this.dt2.Enabled = false;
-            this.dt2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.dt2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt2.Location = new System.Drawing.Point(814, 50);
-            this.dt2.Name = "dt2";
-            this.dt2.Size = new System.Drawing.Size(177, 41);
-            this.dt2.TabIndex = 36;
-            this.dt2.Visible = false;
-            // 
-            // dt1
-            // 
-            this.dt1.Enabled = false;
-            this.dt1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.dt1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt1.Location = new System.Drawing.Point(636, 50);
-            this.dt1.Name = "dt1";
-            this.dt1.Size = new System.Drawing.Size(177, 41);
-            this.dt1.TabIndex = 35;
-            this.dt1.Visible = false;
-            // 
-            // cboCashier
-            // 
-            this.cboCashier.Enabled = false;
-            this.cboCashier.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.cboCashier.FormattingEnabled = true;
-            this.cboCashier.Location = new System.Drawing.Point(392, 54);
-            this.cboCashier.Name = "cboCashier";
-            this.cboCashier.Size = new System.Drawing.Size(238, 43);
-            this.cboCashier.TabIndex = 37;
-            this.cboCashier.Visible = false;
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -219,7 +175,7 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Visible = false;
-            this.Column5.Width = 109;
+            this.Column5.Width = 110;
             // 
             // Column6
             // 
@@ -283,7 +239,7 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Visible = false;
-            this.Column4.Width = 90;
+            this.Column4.Width = 91;
             // 
             // colCancel
             // 
@@ -293,6 +249,50 @@
             this.colCancel.MinimumWidth = 6;
             this.colCancel.Name = "colCancel";
             this.colCancel.Width = 69;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(46)))), ((int)(((byte)(68)))));
+            this.label5.Location = new System.Drawing.Point(10, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 40);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Select Item";
+            // 
+            // dt2
+            // 
+            this.dt2.Enabled = false;
+            this.dt2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.dt2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt2.Location = new System.Drawing.Point(814, 50);
+            this.dt2.Name = "dt2";
+            this.dt2.Size = new System.Drawing.Size(177, 41);
+            this.dt2.TabIndex = 36;
+            this.dt2.Visible = false;
+            // 
+            // dt1
+            // 
+            this.dt1.Enabled = false;
+            this.dt1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.dt1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt1.Location = new System.Drawing.Point(636, 50);
+            this.dt1.Name = "dt1";
+            this.dt1.Size = new System.Drawing.Size(177, 41);
+            this.dt1.TabIndex = 35;
+            this.dt1.Visible = false;
+            // 
+            // cboCashier
+            // 
+            this.cboCashier.Enabled = false;
+            this.cboCashier.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.cboCashier.FormattingEnabled = true;
+            this.cboCashier.Location = new System.Drawing.Point(392, 54);
+            this.cboCashier.Name = "cboCashier";
+            this.cboCashier.Size = new System.Drawing.Size(238, 43);
+            this.cboCashier.TabIndex = 37;
+            this.cboCashier.Visible = false;
             // 
             // CashierReturnItems
             // 
@@ -309,6 +309,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.Name = "CashierReturnItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CashierReturnItems_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

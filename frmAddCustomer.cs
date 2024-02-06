@@ -51,13 +51,13 @@ namespace OOP_System
             {
                 if (txtName.Text == "" || txtContactNo.Text == "" || txtAddress.Text == "")
                 {
-                    MessageBox.Show("Please fill up all fields", "ADD DEBT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please fill up all fields", "SAVE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (txtContactNo.Text.Length != 11)
                 {
-                    MessageBox.Show("Invalid contact number", "ADD DEBT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid contact number", "SAVE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -70,7 +70,7 @@ namespace OOP_System
                 cm.Parameters.AddWithValue("@address", txtAddress.Text);
                 cm.ExecuteNonQuery();
 
-                MessageBox.Show("Customer information saved.", "ADD DEBT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Customer information saved.", "CUSTOMER SAVED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Clear();
 
                 cn.Close();

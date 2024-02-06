@@ -27,6 +27,8 @@ namespace OOP_System
             cn = new SqlConnection(dbcon.MyConnection());
 
             fpos = form;
+
+            this.KeyPreview = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,7 +76,7 @@ namespace OOP_System
                 {
                     if(fpos.dataGridView1.Rows.Count > 0)
                     {
-                        MessageBox.Show("You have pending items in your current transaction", "RESUME TRANSACTION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("You have pending items in your current transaction", "RESUME FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -105,6 +107,14 @@ namespace OOP_System
             {
                 cn.Close();
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ResumeTransaction_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Dispose();
             }
         }
     }

@@ -70,14 +70,14 @@ namespace OOP_System
             {
                 if (txtName.Text == "" || txtContactNo.Text == "" || txtAddress.Text == "")
                 {
-                    MessageBox.Show("Please fill up all fields", "ADD DEBT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please fill up all fields", "ADD CUSTOMER", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
 
                 }
 
                 if(txtContactNo.Text.Length != 11)
                 {
-                    MessageBox.Show("Invalid contact number", "ADD DEBT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid contact number", "ADD CUSTOMER", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -90,7 +90,7 @@ namespace OOP_System
                 cm.Parameters.AddWithValue("@address", txtAddress.Text);
                 cm.ExecuteNonQuery();
 
-                MessageBox.Show("Customer information saved.", "ADD DEBT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Customer information saved.", "CUSTOMER SAVED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Clear();
 
                 cn.Close();
@@ -132,6 +132,16 @@ namespace OOP_System
             {
                 btnUpdate_Click(sender, e);
             }
+        }
+
+        private void txtContactNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
